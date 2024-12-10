@@ -1,27 +1,26 @@
 [
-    {
-      "title": "¿Qué es Ecuador In Tech?",
-      "description": "Ecuador In Tech es una metacomunidad que conecta, fortalece y amplía el impacto de las comunidades tecnológicas en Ecuador, fomentando la colaboración y el intercambio de conocimientos."
-    },
-    {
-      "title": "¿Cómo puedo unirme a la comunidad?",
-      "description": "Puedes unirte a nuestra comunidad registrándote en nuestro sitio web y participando en nuestros eventos y actividades. ¡No te pierdas la oportunidad de conectarte con otros profesionales del sector!"
-    },
-    {
-      "title": "¿Qué beneficios tengo al unirme a la comunidad?",
-      "description": "Al unirte a nuestra comunidad, podrás acceder a recursos y herramientas compartidas, participar en eventos y actividades de colaboración, y conectarte con otros profesionales del sector tecnológico en Ecuador."
-    },
-    {
-      "title": "¿Cómo puedo colaborar con la comunidad?",
-      "description": "Puedes colaborar con la comunidad participando en nuestros eventos y actividades, compartiendo tus conocimientos y experiencias, y apoyando a otros miembros de la comunidad."
-    },
-    {
-      "title": "¿Qué tipo de eventos y actividades organiza la comunidad?",
-      "description": "Organizamos eventos y actividades de colaboración, como conferencias, talleres, y meetups, para conectar a los miembros de la comunidad y fomentar la colaboración y el intercambio de conocimientos."
-    },
-    {
-      "title": "¿Cómo sé qué éste no es un proyecto más, de los muchos que han habido?",
-      "description": "Hay diversas áreas de mejora en la coordinación, organización y direccionamiento de las comunidades tecnológicas en Ecuador. Nuestro cuerpo administrativo está conformado por líderes comunitarios con experiencia en el direccionamiento, organización, escalamiento y sostenibilidad de comunidades; ¡y estamos dispuesto a compartir ese conocimiento!"
-    }
-  ]
-  
+	{
+		"title": "¿Qué es Ecuador In Tech?",
+		"description": "Ecuador In Tech es una metacomunidad que conecta, fortalece y amplía el impacto de las comunidades tecnológicas en Ecuador, fomentando la colaboración y el intercambio de conocimientos."
+	},
+	{
+		"title": "¿Cómo puedo unirme a la comunidad?",
+		"description": "Puedes unirte a nuestra comunidad registrándote en nuestro sitio web y participando en nuestros eventos y actividades. ¡No te pierdas la oportunidad de conectarte con otros profesionales del sector!"
+	},
+	{
+		"title": "¿Qué beneficios tengo al unirme a la comunidad?",
+		"description": "Al unirte a nuestra comunidad, podrás acceder a recursos y herramientas compartidas, participar en eventos y actividades de colaboración, y conectarte con otros profesionales del sector tecnológico en Ecuador."
+	},
+	{
+		"title": "¿Cómo puedo colaborar con la comunidad?",
+		"description": "Puedes colaborar con la comunidad participando en nuestros eventos y actividades, compartiendo tus conocimientos y experiencias, y apoyando a otros miembros de la comunidad."
+	},
+	{
+		"title": "¿Qué tipo de eventos y actividades organiza la comunidad?",
+		"description": "Organizamos eventos y actividades de colaboración, como conferencias, talleres, y meetups, para conectar a los miembros de la comunidad y fomentar la colaboración y el intercambio de conocimientos."
+	},
+	{
+		"title": "¿Cómo sé qué éste no es un proyecto más, de los muchos que han habido?",
+		"description": "Hay diversas áreas de mejora en la coordinación, organización y direccionamiento de las comunidades tecnológicas en Ecuador. Nuestro cuerpo administrativo está conformado por líderes comunitarios con experiencia en el direccionamiento, organización, escalamiento y sostenibilidad de comunidades; ¡y estamos dispuesto a compartir ese conocimiento!"
+	}
+]

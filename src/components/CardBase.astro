@@ -1,46 +1,49 @@
 ---
 interface Props {
-    title: string,
-    description: string,
-    image: string,
-    modality?: string,
+	title: string;
+	description: string;
+	image: string;
+	modality?: string;
 }
 
-const {title, image, modality, description} = Astro.props
+const { title, image, modality, description } = Astro.props;
 ---
 <div
-class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer"
+  class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer"
 >
-    <div class="h-48 overflow-hidden relative">
-        <img
-        src={image}
-        alt={title}
-        class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-300"
-        />
-        {modality && <div class="absolute top-4 right-4">
-            <span
-                class={`px-3 py-1 rounded-full text-sm font-semibold ${
-                modality === "Hybrid"
-                    ? "bg-purple-100 text-purple-800"
-                    : modality === "Virtual"
-                    ? "bg-green-100 text-green-800"
-                    : "bg-blue-100 text-blue-800"
-                }`}
-            >
-                {modality}
-            </span>
-        </div>}
-    </div>
-    <div class="p-6">
-        <!-- Title and description -->
-        <div class="flex flex-col">
-            <div class="flex justify-between items-start mb-3">
-                <h2 class="text-xl font-bold text-gray-800">{title}</h2>
-            </div>
-            <p class="text-gray-600 mb-4 line-clamp-2">{description}</p>
+  <div class="h-48 overflow-hidden relative">
+    <img
+      src={image}
+      alt={title}
+      class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-300"
+    />
+    {
+      modality && (
+        <div class="absolute top-4 right-4">
+          <span
+            class={`px-3 py-1 rounded-full text-sm font-semibold ${
+            	modality === "Hybrid"
+            		? "bg-purple-100 text-purple-800"
+            		: modality === "Virtual"
+            			? "bg-green-100 text-green-800"
+            			: "bg-blue-100 text-blue-800"
+            }`}
+          >
+            {modality}
+          </span>
         </div>
-        <!-- Custom info -->
-        <slot />
+      )
+    }
+  </div>
+  <div class="p-6">
+    <!-- Title and description -->
+    <div class="flex flex-col">
+      <div class="flex justify-between items-start mb-3">
+        <h2 class="text-xl font-bold text-gray-800">{title}</h2>
+      </div>
+      <p class="text-gray-600 mb-4 line-clamp-2">{description}</p>
     </div>
+    <!-- Custom info -->
+    <slot />
+  </div>
 </div>
-
