@@ -6,12 +6,9 @@ let
   };
 in
 
-pkgs.mkShell {
-  buildInputs = [
-    pkgs.pnpm
-    pkgs.biome
-
-    # keep this line if you use bash
-    pkgs.bashInteractive
+pkgs.mkShellNoCC {
+  packages = with pkgs; [
+    pnpm
+    biome
   ];
 }
