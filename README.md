@@ -4,24 +4,64 @@
 
 Somos un espacio colaborativo donde desarrolladores, diseñadores, emprendedores y entusiastas de la tecnología se unen para compartir conocimientos, construir proyectos y fomentar el crecimiento del ecosistema tecnológico ecuatoriano.
 
-### **Nuestra Visión**
+## **Nuestra Visión**
 
 Ser la referencia en Ecuador para conectar, fortalecer y ampliar el impacto de las comunidades tecnológicas.
 
-### **Nuestra Misión**
+## **Nuestra Misión**
 
 * **Unir fuerzas:** Crear puentes entre las diferentes comunidades tecnológicas.
 * **Amplificar el impacto:** Potenciar el alcance y visibilidad de las iniciativas locales.
 * **Crear oportunidades:** Generar espacios para el aprendizaje, networking y desarrollo profesional.
 
-### **Valores**
+## ¿Cómo contribuir en este repositorio?
+
+Usamos `nix` para gestionar las dependencias de este repositorio. Específicamente, el archivo `shell.nix`.
+
+El flujo de trabajo intencionado es invocar `nix-shell` en el directorio raíz de este repositorio. Luego de aquello, se descargarán e iniciarán las dependencias declaradas en el archivo mencionado.
+
+Estas son:
+
+- `pnpm`, wrapper alrededor de npm, enfocado en el rendimiento.
+- `biome`, un linter y formatter escrito en Rust, diseñado para ser compatible con ESLint y Prettier.
+
+Actualmente (2024-12-09T22:47:06-03:00), tenemos esta implementación cómo prueba. En caso de que los voluntarios se acostumbren a este flujo de trabajo, se expanderá el toolkit para diseñar una tubería de Integración Continua que sea desplegable localmente.
+
+### Instalando Nix, administrador de paquetes
+
+#### Arch Linux
+
+``` sh
+sudo pacman -Syu && \
+sudo pacman -S nix
+```
+
+#### Debian (Bookworm)
+
+``` sh
+sudo apt update && \
+sudo apt install nix-setup-systemd
+```
+
+#### Otros
+
+En caso tu distribución, o sistema operativo, no soporta nativamente Nix, el administrador de paquete, puedes [instalar `nix` con las instrucciones oficiales](https://nixos.org/download/).
+
+> # ATENCIÓN (!!!)
+>La documentación oficial asume bash como shell; y luego, hace
+una tubería UNIX hacia el shell, usando curl. **ESTO ES CONSIDERADO
+INSEGURO**. Revisa todo script antes de ejecutarlo.
+
+Alternativamente, estamos considerando usar un dockerfile para inicializar el shell con las dependencias. Envíen issues y PR.
+
+## **Valores**
 
 * **Colaboración**
 * **Diversidad**
 * **Inclusión**
 * **Sostenibilidad**
 
-### **Cómo Participar**
+## **Cómo Participar**
 
 * **Eventos:** Asiste a nuestros meetups, conferencias y talleres.
 * **Proyectos:** Colabora en proyectos open-source o crea los tuyos.
@@ -29,7 +69,7 @@ Ser la referencia en Ecuador para conectar, fortalecer y ampliar el impacto de l
 * **Mentoría:** Ofrece o recibe mentoría de otros miembros de la comunidad.
 * **Contenido:** Comparte tus conocimientos a través de blog posts, tutoriales o podcasts.
 
-### **Código de Conducta**
+## **Código de Conducta**
 
 Creemos en un entorno seguro y respetuoso para todos. Adherimos a los siguientes principios:
 
@@ -40,7 +80,7 @@ Creemos en un entorno seguro y respetuoso para todos. Adherimos a los siguientes
 
 [nuestro código de conducta](CODE_OF_CONDUCT.md)
 
-### **Únete a Nosotros**
+## **Únete a Nosotros**
 
 * **GitHub:** [\[Ecuador In Tech\]](https://github.com/Ecuador-In-Tech)
 
