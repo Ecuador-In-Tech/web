@@ -1,14 +1,14 @@
 [
-    {
-      "id": "git-github-workshop",
-      "title": "Git & GitHub",
-      "description": "Hands-on Workshop para iniciantes.",
-      "link": "https://ecuadorintech.org/events",
-      "date": "2024-12-4",
-      "place": "Online",
-      "modality": "Virtual",
-      "hostedBy": "Ecuador In Tech",
-      "image": "/github-workshop.jpg",
-      "attendees": 31
-    }
+	{
+		"id": "git-github-workshop",
+		"title": "Git & GitHub",
+		"description": "Hands-on Workshop para iniciantes.",
+		"link": "https://ecuadorintech.org/events",
+		"date": "2024-12-4",
+		"place": "Online",
+		"modality": "Virtual",
+		"hostedBy": "Ecuador In Tech",
+		"image": "/github-workshop.jpg",
+		"attendees": 31
+	}
 ]

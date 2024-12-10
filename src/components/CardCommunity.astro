@@ -1,11 +1,10 @@
 ---
-import { object } from 'astro:schema';
-import type {Community, Links} from '../interfaces/communities'
-import CardBase from './CardBase.astro';
+import { object } from "astro:schema";
+import type { Community, Links } from "../interfaces/communities";
+import CardBase from "./CardBase.astro";
 
-const {name, description, links, tags=[], image} = Astro.props as Community
-const communityHeaderProps = {title:name, image, description}
-
+const { name, description, links, tags = [], image } = Astro.props as Community;
+const communityHeaderProps = { title: name, image, description };
 ---
 <CardBase {...communityHeaderProps}>
   <!-- Tags -->

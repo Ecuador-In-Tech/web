@@ -1,12 +1,12 @@
 ---
 interface Props {
-    title: string,
-    description: string,
-    image: string,
-    modality?: string,
+	title: string;
+	description: string;
+	image: string;
+	modality?: string;
 }
 
-const {title, image, modality, description} = Astro.props
+const { title, image, modality, description } = Astro.props;
 ---
 <div
 class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer"
