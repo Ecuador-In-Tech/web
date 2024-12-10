@@ -1,9 +1,8 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import communities from '../assets/communities.json'
-import type { Community } from '../interfaces/communities';
-import CardCommunity from '../components/CardCommunity.astro';
-
+import communities from "../assets/communities.json";
+import CardCommunity from "../components/CardCommunity.astro";
+import type { Community } from "../interfaces/communities";
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Comunidades - Ecuador In Tech">
@@ -11,7 +10,7 @@ import CardCommunity from '../components/CardCommunity.astro';
     <h1 class="text-4xl font-bold mb-8">Comunidades</h1>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {
-        communities.map((community:Community) => (
+        communities.map((community: Community) => (
           <CardCommunity {...community} />
         ))
       }
