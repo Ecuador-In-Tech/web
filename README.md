@@ -43,6 +43,16 @@ sudo apt update && \
 sudo apt install nix-setup-systemd
 ```
 
+> # ATENCIÓN (!!!)
+>Se han reportado [inconvenientes en la instalación de nix a través
+de apt](https://github.com/Ecuador-In-Tech/web/pull/20).
+> La solución es agregar el usuario al grupo
+`nix-users`(https://discourse.nixos.org/t/nix-var-nix-daemon-socket-socket-permission-denied/39142);
+en caso la instalación `nix-setup-systemd` no haya funcionado
+correctamente.
+>En caso que el problema persista, por favor, instale de acuerdo a las
+instrucciones oficiales.
+
 #### Otros
 
 En caso tu distribución, o sistema operativo, no soporta nativamente Nix, el administrador de paquete, puedes [instalar `nix` con las instrucciones oficiales](https://nixos.org/download/).
