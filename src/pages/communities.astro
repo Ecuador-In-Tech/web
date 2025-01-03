@@ -1,17 +1,17 @@
 ---
 import communities from "../assets/communities.json";
-import CardCommunity from "../components/CardCommunity.astro";
+import CommunityCard from "../components/CommunityCard/CommunityCard.astro";
 import type { Community } from "../interfaces/communities";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Comunidades - Ecuador In Tech">
-  <div class="container mx-auto px-4 py-12">
+  <div class="container mx-auto max-w-fit px-4 py-12">
     <h1 class="text-4xl font-bold mb-8">Comunidades</h1>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
       {
-        communities.map((community: Community) => (
-          <CardCommunity {...community} />
+        communities.map((community:Community) => (
+          <CommunityCard {...community} />
         ))
       }
     </div>
