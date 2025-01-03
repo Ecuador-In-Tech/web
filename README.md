@@ -33,7 +33,27 @@ Al igual que `biome`, esta es una herramienta intencionada en reemplazar, en est
 
 ### Instalación
 
-[Estamos a la mitad de una implementación de Nix, como administrador de paquete.](https://github.com/Ecuador-In-Tech/web/pull/20)
+#### pnpm
+
+Preferimos una instalación global usando `pnpm`
+
+```sh
+pnpm install --global @biomejs/biome dprint
+```
+
+Sin embargo, tanto `biome` como `dprint` están declarados cómo dependencias de desarrollo dentro del `package.json`.
+
+>[Estamos a la mitad de una implementación de Nix, como administrador de paquete.](https://github.com/Ecuador-In-Tech/web/pull/20)
+
+### Desarrollo
+
+La tubería UNIX intencionada para el desarrollo de este proyecto es:
+
+```sh
+pnpm check && pnpm dev
+```
+
+>Se está ponderando qué task runner se implementará para mejorar la experiencia de desarrollo
 
 ### **Valores**
 
