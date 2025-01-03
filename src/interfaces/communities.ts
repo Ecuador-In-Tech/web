@@ -8,7 +8,7 @@ export interface Community {
 
 export interface Links{
     website: string, 
-    social?: string | SocialLinks
+    social?: SocialLinks
 }
 
 export interface SocialLinks{

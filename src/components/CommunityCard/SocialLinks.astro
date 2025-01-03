@@ -5,7 +5,7 @@ import github from '../../../public/icons/github.svg?raw';
 import type { SocialLinks } from '../../interfaces/communities';
 
 const { 
-  githubUrl="https://github.com", linkedinUrl="https://linkedin.com", instagramUrl="https://instagram.com" } = Astro.props as SocialLinks;
+  githubUrl, linkedinUrl, instagramUrl } = Astro.props as SocialLinks;
 ---
 
 <div class="flex flex-row gap-3 items-center">
