@@ -7,7 +7,7 @@
 		"build": "astro build",
 		"preview": "astro preview",
 		"astro": "astro",
-		"check": "biome check && dprint fmt"
+		"check": "biome check --fix && dprint fmt"
 	},
 	"dependencies": {
 		"@astrojs/alpinejs": "^0.4.1",
