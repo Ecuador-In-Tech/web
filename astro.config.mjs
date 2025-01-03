@@ -11,11 +11,13 @@ import compressor from "astro-compressor";
 
 // https://astro.build/config
 export default defineConfig({
-
-  site: "https://ecuadorintech.org",
-  integrations: [
-    tailwind({
-      applyBaseStyles: false,
-    }), 
-    alpinejs(), sitemap(), compressor()]
-})
+	site: "https://ecuadorintech.org",
+	integrations: [
+		tailwind({
+			applyBaseStyles: false,
+		}),
+		alpinejs(),
+		sitemap(),
+		compressor(),
+	],
+});

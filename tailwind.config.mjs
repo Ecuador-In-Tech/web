@@ -4,9 +4,9 @@ export default {
 	theme: {
 		extend: {
 			fontFamily: {
-				montserrat: ['Montserrat', 'sans-serif'], 
-				gabarito: ['Gabarito', 'sans-serif'], 
-			  },
+				montserrat: ["Montserrat", "sans-serif"],
+				gabarito: ["Gabarito", "sans-serif"],
+			},
 		},
 	},
 	plugins: [],
