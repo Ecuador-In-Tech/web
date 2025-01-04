@@ -1,67 +1,65 @@
 ---
+import Link from "./shared/Link.astro";
+
+import burgerMenuIcon from '../../public/icons/burgerMenu.svg?raw';
+import closeIcon from '../../public/icons/closeIcon.svg?raw';
+
 const links = [
-	{ text: "Inicio", href: "/" },
-	{ text: "Comunidades", href: "/communities" },
-	{ text: "Eventos", href: "/events" },
+  { text: 'Inicio', href: '/' },
+  { text: 'Comunidades', href: '/communities' },
+  { text: 'Eventos', href: '/events' },
+  { text: 'Voluntariado', href: '/#about-us' },
 ];
 ---
+<nav x-data="{
+        openMenu: false,
 
-<nav class="bg-gray-800">
-  <div class="container mx-auto px-4 py-2 flex justify-between items-center">
-    <a href="/" class="text-white font-bold">Ecuador In Tech</a>
+        toggleMenu() {
+            this.openMenu = !this.openMenu
+        },
+        close(){
+            this.openMenu = false
+        }
+    }"  
+    
+    class="bg-gray-800 w-full fixed z-10">
+    <div class="container mx-auto px-4 py-2 flex justify-between items-center">
+        <a href="/" class="font-montserrat text-white font-bold">Ecuador In Tech</a>
 
-    <button id="mobile-menu-button" class="block lg:hidden">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        class="h-6 w-6 text-white"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M4 6h16M4 12h16M4 18h16"
-        />
-      </svg>
-    </button>
+        <!-- Burger menu button -->
+        <button @click="toggleMenu()" id="mobile-menu-button" class="block lg:hidden">
+            <Fragment set:html={burgerMenuIcon} />
+        </button> 
 
-    <div class="hidden lg:flex lg:items-center lg:space-x-8">
-      <!-- <a href="#" class="text-white hover:text-gray-300">Home</a> -->
-      {
-        links.map((link) => (
-          <a
-            href={link.href}
-            class="text-white hover:text-gray-300 px-3 py-2 rounded-md"
-          >
-            {link.text}
-          </a>
-        ))
-      }
-    </div>  
-  </div>
+        <!-- Links -->
+        <div class="hidden text-[0.9rem] lg:flex lg:items-center lg:space-x-8">
+            {links.slice(1).map(link => (
+                <Link href={link.href} text={link.text}/>
+              ))}
+        </div>   
 
-  <div id="mobile-menu" class="hidden lg:hidden">
-    <ul class="bg-gray-800 text-white">
-      {
-        links.map((link) => (
-          <a href={link.href} class="block py-2 px-4 hover:bg-gray-700">
-            {link.text}
-          </a>
-        ))
-      }
-    </ul>
-  </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div 
+        x-ref="dropdown-menu"
+        x-show="openMenu"
+        x-transition.origin.top.left
+        x-cloak
+        class="fixed top-0 left-0 w-full h-full bg-gray-800 z-10 lg:hidden"
+        > 
+        <!-- Close button -->
+        <a @click="toggleMenu()" class="w-full flex flex-row justify-end px-4 py-3  text-white cursor-pointer" >
+            <Fragment set:html={closeIcon} />
+        </a>
+        <!-- Links -->
+        <ul class="flex flex-col items-center justify-center h-full p-4">
+            {links.map((link) => (
+                <div class="block my-4 px-4 uppercase text-xl hover:font-medium" >
+                    <Link href={link.href} text={link.text} />
+                </div>
+            ))}
+            <div class="h-[10%]"></div>
+        </ul>
+    </div>
 </nav>
-
-<script>
-const mobileMenuButton = document.getElementById(
-	"mobile-menu-button",
-) as HTMLElement;
-const mobileMenu = document.getElementById("mobile-menu") as HTMLElement;
-
-mobileMenuButton.addEventListener("click", () => {
-	mobileMenu.classList.toggle("hidden");
-});
-</script>

@@ -1,0 +1,16 @@
+---
+interface Props {
+    text: string, 
+    href: string,
+    size?: string
+}
+
+const {text, href, size} = Astro.props;
+const currentPath = Astro.url.pathname;
+---
+<div>
+    <a href={href} class="font-montserrat text-gray-300 hover:text-white px-3 py-2 rounded-md">
+        {text}
+    </a>
+</div>
+
