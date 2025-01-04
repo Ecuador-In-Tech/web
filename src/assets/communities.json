@@ -1,37 +1,44 @@
 [
-    {
-      "name": "Kernel Chaos",
-      "description": "Kernel Chaos es un espacio hacker comunitario dedicado a fomentar la colaboración y el aprendizaje entre entusiastas de Linux y FOSS.",
-      "links": {"website": "https://kernelchaos.org", "social": {"instagramUrl": "https://instagram.com/kernelchaosec", "githubUrl": "", "linkedinUrl": ""}},
-      "tags": [
-        "FOSS",
-        "Open Source",
-        "Programming"
-      ],
-      "image": "/kernel-chaos.png"
-    },
-    {
-      "name": "Wordpress Guayaquil",
-      "description": "Reuniones orientadas a hacer que WordPress sea abierto y accesible para quien esté interesadx en usarlo, desarrollarlo o hacer negocios con él.",
-      "links": {"website": "https://www.meetup.com/wordpress-guayaquil-meetup", "social": {"instagramUrl": "https://instagram.com/wpguayaquil", "githubUrl": "", "linkedinUrl": ""}},
-      "tags": [
-        "Design",
-        "UI",
-        "UX",
-        "Creative"
-      ],
-      "image": "/wordpress.png"
-    },
-    {
-      "name": "HerUX",
-      "description": "Primera comunidad de Mujeres Profesionales apasionadas por la Experiencia del Usuario de #guayaquil.",
-      "links": {"website": "https://ec.linkedin.com/company/her-ux", "social": {"instagramUrl": "https://www.instagram.com/her.uxec", "githubUrl": "", "linkedinUrl": "https://www.linkedin.com/company/her-ux/"}},
-      "tags": [
-        "UX",
-        "UI",
-        "Creative"
-      ],
-      "image": "/herux.png"
-    }
-  ]
-  
+	{
+		"name": "Kernel Chaos",
+		"description": "Kernel Chaos es un espacio hacker comunitario dedicado a fomentar la colaboración y el aprendizaje entre entusiastas de Linux y FOSS.",
+		"links": {
+			"website": "https://kernelchaos.org",
+			"social": {
+				"instagramUrl": "https://instagram.com/kernelchaosec",
+				"githubUrl": "",
+				"linkedinUrl": ""
+			}
+		},
+		"tags": ["FOSS", "Open Source", "Programming"],
+		"image": "/kernel-chaos.png"
+	},
+	{
+		"name": "Wordpress Guayaquil",
+		"description": "Reuniones orientadas a hacer que WordPress sea abierto y accesible para quien esté interesadx en usarlo, desarrollarlo o hacer negocios con él.",
+		"links": {
+			"website": "https://www.meetup.com/wordpress-guayaquil-meetup",
+			"social": {
+				"instagramUrl": "https://instagram.com/wpguayaquil",
+				"githubUrl": "",
+				"linkedinUrl": ""
+			}
+		},
+		"tags": ["Design", "UI", "UX", "Creative"],
+		"image": "/wordpress.png"
+	},
+	{
+		"name": "HerUX",
+		"description": "Primera comunidad de Mujeres Profesionales apasionadas por la Experiencia del Usuario de #guayaquil.",
+		"links": {
+			"website": "https://ec.linkedin.com/company/her-ux",
+			"social": {
+				"instagramUrl": "https://www.instagram.com/her.uxec",
+				"githubUrl": "",
+				"linkedinUrl": "https://www.linkedin.com/company/her-ux/"
+			}
+		},
+		"tags": ["UX", "UI", "Creative"],
+		"image": "/herux.png"
+	}
+]

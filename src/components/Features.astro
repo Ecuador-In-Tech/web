@@ -1,39 +1,41 @@
 ---
-import commitments from '../assets/commitments.json'
-
+import commitments from "../assets/commitments.json";
 ---
 
 <section class="py-16">
   <div class="container mx-auto px-4">
     <h2 class="text-3xl font-bold text-center mb-12">
-        Nuestros compromisos
+      Nuestros compromisos
     </h2>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      {commitments.map(commitment => (
-      <div class="text-center p-6">
-        <div
-          class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
-        >
-          <svg
-            class="w-8 h-8 text-blue-600"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d={commitment.icon}
-            ></path>
-          </svg>
-        </div>
-        <h3 class="text-xl font-bold mb-4">{commitment.title}</h3>
-        <p class="text-gray-600">
-          {commitment.description}
-        </p>
-      </div>
-      ))}
+      {
+        commitments.map((commitment) => (
+          <div class="text-center p-6">
+            <div
+              class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <svg
+                class="w-8 h-8 text-blue-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d={commitment.icon}
+                >
+                </path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-4">{commitment.title}</h3>
+            <p class="text-gray-600">
+              {commitment.description}
+            </p>
+          </div>
+        ))
+      }
     </div>
   </div>
 </section>

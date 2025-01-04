@@ -1,20 +1,19 @@
 ---
-import SocialLinks from './SocialLinks.astro';
-import Tags from './Tags.astro';
-import Avatar from './Avatar.astro';
-import type {Community} from '../../interfaces/communities'
+import type { Community } from "../../interfaces/communities";
+import Avatar from "./Avatar.astro";
+import SocialLinks from "./SocialLinks.astro";
+import Tags from "./Tags.astro";
 
 const {
-  name,
-  description,
-  tags,
-  image="/path-to-default-logo.png",
-  links
+	name,
+	description,
+	tags,
+	image = "/path-to-default-logo.png",
+	links,
 } = Astro.props as Community;
 ---
 
 <div class="bg-white rounded-2xl p-6 max-w-lg drop-shadow-md">
-
   <div class="flex items-start gap-4">
     <Avatar logoUrl={image} title={name} />
     <div class="flex-1 space-y-3">
@@ -24,13 +23,11 @@ const {
         </h3>
         <p class="text-gray-600 text-sm leading-relaxed">{description}</p>
       </div>
-      
+
       <Tags tags={tags} />
-      
+
       <div class="pt-2 border-t border-gray-100">
-        <SocialLinks
-          {...links?.social}
-        />
+        <SocialLinks {...links?.social} />
       </div>
     </div>
   </div>

@@ -1,15 +1,19 @@
 ---
 interface Props {
-  tags: string[];
+	tags: string[];
 }
 
 const { tags } = Astro.props;
 ---
 
 <div class="flex flex-wrap gap-2">
-  {tags.map((tag) => (
-    <span class="px-3 py-1 bg-blue-50 text-xs font-medium rounded-full text-blue-600 hover:bg-blue-100 transition-colors duration-200 cursor-default">
-      {tag}
-    </span>
-  ))}
+  {
+    tags.map((tag) => (
+      <span
+        class="px-3 py-1 bg-blue-50 text-xs font-medium rounded-full text-blue-600 hover:bg-blue-100 transition-colors duration-200 cursor-default"
+      >
+        {tag}
+      </span>
+    ))
+  }
 </div>

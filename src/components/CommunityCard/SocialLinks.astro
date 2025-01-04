@@ -1,39 +1,44 @@
 ---
-import instagram from '../../../public/icons/instagram.svg?raw';
-import linkedin from '../../../public/icons/linkedin.svg?raw';
-import github from '../../../public/icons/github.svg?raw';
-import type { SocialLinks } from '../../interfaces/communities';
+import github from "../../../public/icons/github.svg?raw";
+import instagram from "../../../public/icons/instagram.svg?raw";
+import linkedin from "../../../public/icons/linkedin.svg?raw";
+import type { SocialLinks } from "../../interfaces/communities";
 
-const { 
-  githubUrl, linkedinUrl, instagramUrl } = Astro.props as SocialLinks;
+const { githubUrl, linkedinUrl, instagramUrl } = Astro.props as SocialLinks;
 ---
 
 <div class="flex flex-row gap-3 items-center">
-  {githubUrl && (
-    <a 
-      href={githubUrl}
-      class="text-gray-600 hover:text-gray-900 transition-colors duration-200 p-2 hover:bg-gray-100 rounded-full"
-      aria-label="GitHub Profile"
-    >
-      <Fragment set:html={github} />
-    </a>
-  )}
-  {linkedinUrl && (
-    <a 
-      href={linkedinUrl}
-      class="text-gray-600 hover:text-gray-900 transition-colors duration-200 p-2 hover:bg-gray-100 rounded-full"
-      aria-label="LinkedIn Profile"
-    >
-      <Fragment set:html={linkedin} />
-    </a>
-  )}
-  {instagramUrl && (
-    <a 
-      href={instagramUrl}
-      class="text-gray-600 hover:text-gray-900 transition-colors duration-200 p-2 hover:bg-gray-100 rounded-full"
-      aria-label="Instagram Profile"
-    >
-      <Fragment set:html={instagram} />
-    </a>
-  )}
+  {
+    githubUrl && (
+      <a
+        href={githubUrl}
+        class="text-gray-600 hover:text-gray-900 transition-colors duration-200 p-2 hover:bg-gray-100 rounded-full"
+        aria-label="GitHub Profile"
+      >
+        <Fragment set:html={github} />
+      </a>
+    )
+  }
+  {
+    linkedinUrl && (
+      <a
+        href={linkedinUrl}
+        class="text-gray-600 hover:text-gray-900 transition-colors duration-200 p-2 hover:bg-gray-100 rounded-full"
+        aria-label="LinkedIn Profile"
+      >
+        <Fragment set:html={linkedin} />
+      </a>
+    )
+  }
+  {
+    instagramUrl && (
+      <a
+        href={instagramUrl}
+        class="text-gray-600 hover:text-gray-900 transition-colors duration-200 p-2 hover:bg-gray-100 rounded-full"
+        aria-label="Instagram Profile"
+      >
+        <Fragment set:html={instagram} />
+      </a>
+    )
+  }
 </div>

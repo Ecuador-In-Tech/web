@@ -1,50 +1,67 @@
 ---
 const links = [
-  { text: 'Inicio', href: '/' },
-  { text: 'Comunidades', href: '/communities' },
-  { text: 'Eventos', href: '/events' },
+	{ text: "Inicio", href: "/" },
+	{ text: "Comunidades", href: "/communities" },
+	{ text: "Eventos", href: "/events" },
 ];
 ---
 
 <nav class="bg-gray-800">
-    <div class="container mx-auto px-4 py-2 flex justify-between items-center">
-        <a href="/" class="text-white font-bold">Ecuador In Tech</a>
+  <div class="container mx-auto px-4 py-2 flex justify-between items-center">
+    <a href="/" class="text-white font-bold">Ecuador In Tech</a>
 
-        <button id="mobile-menu-button" class="block lg:hidden">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-        </button> 
+    <button id="mobile-menu-button" class="block lg:hidden">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-6 w-6 text-white"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16"
+        />
+      </svg>
+    </button>
 
+    <div class="hidden lg:flex lg:items-center lg:space-x-8">
+      <!-- <a href="#" class="text-white hover:text-gray-300">Home</a> -->
+      {
+        links.map((link) => (
+          <a
+            href={link.href}
+            class="text-white hover:text-gray-300 px-3 py-2 rounded-md"
+          >
+            {link.text}
+          </a>
+        ))
+      }
+    </div>  
+  </div>
 
-        <div class="hidden lg:flex lg:items-center lg:space-x-8">
-            <!-- <a href="#" class="text-white hover:text-gray-300">Home</a> -->
-            {links.map(link => (
-                <a href={link.href} class="text-white hover:text-gray-300 px-3 py-2 rounded-md">
-                  {link.text}
-                </a>
-              ))}
-        </div>   
-
-    </div>
-
-    <div id="mobile-menu" class="hidden lg:hidden">
-        <ul class="bg-gray-800 text-white">
-            {links.map(link => (
-                <a href={link.href} class="block py-2 px-4 hover:bg-gray-700">
-                  {link.text}
-                </a>
-              ))}
-        </ul>
-    </div>
+  <div id="mobile-menu" class="hidden lg:hidden">
+    <ul class="bg-gray-800 text-white">
+      {
+        links.map((link) => (
+          <a href={link.href} class="block py-2 px-4 hover:bg-gray-700">
+            {link.text}
+          </a>
+        ))
+      }
+    </ul>
+  </div>
 </nav>
 
 <script>
-    const mobileMenuButton = document.getElementById('mobile-menu-button') as HTMLElement;
-    const mobileMenu = document.getElementById('mobile-menu') as HTMLElement;
+const mobileMenuButton = document.getElementById(
+	"mobile-menu-button",
+) as HTMLElement;
+const mobileMenu = document.getElementById("mobile-menu") as HTMLElement;
 
-    mobileMenuButton.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');   
-
-    });
+mobileMenuButton.addEventListener("click", () => {
+	mobileMenu.classList.toggle("hidden");
+});
 </script>

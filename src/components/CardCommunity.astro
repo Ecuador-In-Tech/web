@@ -1,0 +1,50 @@
+---
+import { object } from "astro:schema";
+import type { Community, Links } from "../interfaces/communities";
+import CardBase from "./CardBase.astro";
+
+const { name, description, links, tags = [], image } = Astro.props as Community;
+const communityHeaderProps = { title: name, image, description };
+---
+<CardBase {...communityHeaderProps}>
+  <!-- Tags -->
+  <div class="mb-4 flex flex-wrap gap-2">
+    {
+      tags.map((tag) => (
+        <span
+          class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium hover:bg-gray-200 transition-colors"
+        >
+          {tag}
+        </span>
+      ))
+    }
+  </div>
+  <!-- Social Media -->
+  <div class="pt-4 border-t border-gray-100">
+    <div class="flex gap-3">
+      {
+        links &&
+		Object.entries(links).map(([key, value]) => {
+			// const hostname = new URL(link).hostname;
+			// const icon = hostname.includes("instagram")
+			//   ? "💬"
+			//   : hostname.includes("github")
+			//     ? "📚"
+			//     : hostname.includes("linkedin")
+			//       ? "🎨"
+			//       : "🔗";
+			return (
+          <a
+            href={value}
+            class="inline-flex items-center gap-1 text-blue-600 hover:text-blue-800 transition-colors text-sm"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span>{key}</span> {/* {hostname.split(".")[0]} */}
+          </a>
+        );
+		})
+      }
+    </div>
+  </div>
+</CardBase>

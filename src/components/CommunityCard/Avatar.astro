@@ -1,13 +1,16 @@
 ---
 interface Props {
-  logoUrl: string;
-  title: string;
+	logoUrl: string;
+	title: string;
 }
 
 const { logoUrl, title } = Astro.props;
 ---
 <div class="relative group items-center">
-  <div class="absolute -inset-0.5 bg-gradient-to-r rounded-full opacity-75 group-hover:opacity-100 blur transition duration-200"></div>
+  <div
+    class="absolute -inset-0.5 bg-gradient-to-r rounded-full opacity-75 group-hover:opacity-100 blur transition duration-200"
+  >
+  </div>
   <img
     src={logoUrl}
     alt={title}

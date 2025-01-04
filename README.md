@@ -14,6 +14,47 @@ Ser la referencia en Ecuador para conectar, fortalecer y ampliar el impacto de l
 * **Amplificar el impacto:** Potenciar el alcance y visibilidad de las iniciativas locales.
 * **Crear oportunidades:** Generar espacios para el aprendizaje, networking y desarrollo profesional.
 
+## ¿Cómo contribuir en este repositorio?
+
+Este repositorio tiene instalado:
+
+- Un linter, `biome`
+- Un formatter, `dprint`
+
+Además de usar `pnpm` cómo administrador de paquetes para JS y amigos.
+
+### Biome
+
+`biome` es una alternativa a ESLint + Prettier, que está escrita en Rust. Es una excelente herramienta, que acorta considerablemente el tiempo de desarrollo. Aunque esta herramienta tiene un [paquete distribuído a través de `npm`](https://www.npmjs.com/package/@biomejs/biome), la invocación a través de `npm` / `pnpm` es un cuello de botella para su rendimiento.
+
+### Dprint
+
+Al igual que `biome`, esta es una herramienta intencionada en reemplazar, en este caso, a Prettier. La razón por la cuál usamos `dprint` es porque [`biome` tiene soporte parcial para HTML y sus supersets](https://biomejs.dev/internals/language-support/#html-super-languages-support). Es decir: usamos `dprint` para suplementar biome.
+
+### Instalación
+
+#### pnpm
+
+Preferimos una instalación global usando `pnpm`
+
+```sh
+pnpm install --global @biomejs/biome dprint
+```
+
+Sin embargo, tanto `biome` como `dprint` están declarados cómo dependencias de desarrollo dentro del `package.json`.
+
+>[Estamos a la mitad de una implementación de Nix, como administrador de paquete.](https://github.com/Ecuador-In-Tech/web/pull/20)
+
+### Desarrollo
+
+La tubería UNIX intencionada para el desarrollo de este proyecto es:
+
+```sh
+pnpm check && pnpm dev
+```
+
+>Se está ponderando qué task runner se implementará para mejorar la experiencia de desarrollo
+
 ### **Valores**
 
 * **Colaboración**

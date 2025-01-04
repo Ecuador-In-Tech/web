@@ -1,23 +1,28 @@
 {
-  "name": "ecuador_in_tech_webpage",
-  "type": "module",
-  "version": "0.0.1",
-  "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
-  "dependencies": {
-    "@astrojs/alpinejs": "^0.4.1",
-    "@astrojs/rss": "^4.0.10",
-    "@astrojs/sitemap": "^3.2.1",
-    "@astrojs/tailwind": "^5.1.4",
-    "@types/alpinejs": "^3.13.11",
-    "alpinejs": "^3.14.8",
-    "astro": "^5.1.1",
-    "astro-compressor": "^1.0.0",
-    "tailwindcss": "^3.4.17"
-  },
-  "packageManager": "pnpm@10.0.0-beta.1+sha512.629de0531b9ae9a3f8e372d014ef8f5a57906d9a48095ced54bbfbd246b4136381478032c8d13819fd1eedde8330517a799ea6756eedd9a136e36524fa3083cf"
+	"name": "ecuador_in_tech_webpage",
+	"type": "module",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview",
+		"astro": "astro",
+		"check": "biome check --fix && dprint fmt"
+	},
+	"dependencies": {
+		"@astrojs/alpinejs": "^0.4.1",
+		"@astrojs/rss": "^4.0.11",
+		"@astrojs/sitemap": "^3.2.1",
+		"@astrojs/tailwind": "^5.1.4",
+		"@types/alpinejs": "^3.13.11",
+		"alpinejs": "^3.14.8",
+		"astro": "^5.1.2",
+		"astro-compressor": "^1.0.0",
+		"tailwindcss": "^3.4.17"
+	},
+	"packageManager": "pnpm@10.0.0-beta.1+sha512.629de0531b9ae9a3f8e372d014ef8f5a57906d9a48095ced54bbfbd246b4136381478032c8d13819fd1eedde8330517a799ea6756eedd9a136e36524fa3083cf",
+	"devDependencies": {
+		"@biomejs/biome": "^1.9.4",
+		"dprint": "^0.48.0"
+	}
 }
