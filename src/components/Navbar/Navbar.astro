@@ -1,0 +1,53 @@
+---
+import Link from "./Link.astro";
+
+import burgerMenuIcon from "../../../public/icons/burgerMenu.svg?raw";
+import OffcanvasMenu from "./OffcanvasMenu.astro";
+
+const links = [
+	{ text: "Inicio", href: "/" },
+	{ text: "Comunidades", href: "/communities" },
+	{ text: "Eventos", href: "/events" },
+	{ text: "Voluntariado", href: "/#about-us" },
+];
+---
+<!--
+Navbar component:
+- Includes Alpine.js state (`openMenu`) and method (`toggleMenu`) to manage the offcanvas menu interactivity.
+- Alpine.js directives control visibility (`x-bind:class`), user interaction (`@click`), and transitions (`x-transition`) in father and children components.
+- Links are rendered dynamically.
+-->
+
+<nav
+  x-data="{
+    openMenu: false,
+
+    toggleMenu() {
+      this.openMenu = !this.openMenu;
+    }
+  }"
+  class="bg-gray-800 w-full fixed z-10"
+>
+  <div class="container mx-auto px-4 py-2 flex justify-between items-center">
+    <a href="/" class="font-gabarito text-white text-lg  font-bold">Ecuador In Tech</a>
+
+    <!-- Burger menu button -->
+    <button
+      @click="toggleMenu()"
+      id="mobile-menu-button"
+      class="block lg:hidden"
+    >
+      <Fragment set:html={burgerMenuIcon} />
+    </button>
+
+    <!-- Links -->
+    <div class="hidden lg:flex lg:items-center lg:space-x-8">
+      {links.slice(1).map((link) => (
+        <Link href={link.href} text={link.text} size="text-[0.95rem]"/>
+      ))}
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <OffcanvasMenu links={links}/>
+</nav>

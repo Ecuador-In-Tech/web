@@ -1,0 +1,24 @@
+---
+interface Props {
+	text: string;
+	href: string;
+	size?: string;
+}
+
+const { text, href, size } = Astro.props;
+---
+<!-- 
+Link component:
+- Handles navigation within the app.
+- (Within offcanvas menu) clicking a link triggers `toggleMenu()` to close the menu and navigate to the selected section.
+
+* IMPORTANT: This logic applies only to relevant use cases. External links or non-interactive links might require adjustments.
+-->
+<div @click=toggleMenu()">
+  <a
+    href={href}
+    class=`font-gabarito text-gray-300 ${size} tracking-wide px-3 py-2 rounded-md hover:text-white`
+  >
+    {text}
+  </a>
+</div>

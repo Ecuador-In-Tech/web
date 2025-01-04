@@ -32,13 +32,14 @@
     @apply text-lg;
   }
 
-  span, svg{
-      @apply text-sm
+  span,
+  svg{
+    @apply text-sm
   }
   
   /* Avoids undesired offcanvas menu 'blink' when closing */
   [x-cloak] {
-      display: none !important;
+    display: none !important;
   }
 
   /* Components custom styles */

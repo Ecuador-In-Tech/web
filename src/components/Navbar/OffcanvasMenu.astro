@@ -1,0 +1,46 @@
+---
+import closeIcon from "../../../public/icons/closeIcon.svg?raw";
+import Link from "./Link.astro";
+
+interface Link {
+	text: string;
+	href: string;
+}
+const { links } = Astro.props;
+---
+<!-- 
+OffcanvasMenu component:
+- Interactivity relies on Alpine.js:
+  1. Visibility: Managed by `x-bind:class`, implements Tailwind classes relying on the `openMenu` state from `Navbar`.
+  2. Transitions: Implemented using `x-transition.origin.top.left` for smooth animations.
+  3. Blinking prevention: Uses `x-cloak` to hide elements until Alpine.js initializes.
+- User actions (clicking the burger menu or links) trigger `toggleMenu()` to open/close the menu.
+-->
+
+<div
+    x-cloak
+    x-bind:class="{
+      'translate-x-0 ': openMenu,
+      '-translate-x-full duration-400': !openMenu
+    }"
+    
+    class="fixed top-0 left-0 w-full h-full bg-gray-800 text-white transform transition-transform duration-300"
+  >
+    <!-- Close button -->
+    <a
+      @click="toggleMenu()"
+      class="w-full flex flex-row justify-end px-4 py-3 text-white cursor-pointer"
+    >
+      <Fragment set:html={closeIcon} />
+    </a>
+
+    <!-- Links -->
+    <ul class="flex flex-col items-center justify-center h-full p-4">
+      {links.map((link:Link) => (
+        <div class="block my-4 px-4 uppercase text-xl hover:font-medium">
+          <Link href={link.href} text={link.text} />
+        </div>
+      ))}
+      <div class="h-[10%]"></div>
+    </ul>
+</div>
