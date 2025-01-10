@@ -14,10 +14,10 @@ Link component:
 
 * IMPORTANT: This logic applies only to relevant use cases. External links or non-interactive links might require adjustments.
 -->
-<div @click=toggleMenu()">
+<div @click="openMenu && toggleMenu()">
   <a
     href={href}
-    class=`font-gabarito text-gray-300 ${size} tracking-wide px-3 py-2 rounded-md hover:text-white`
+    class={`font-gabarito text-gray-300 ${size} tracking-wide px-3 py-2 rounded-md hover:text-white`}
   >
     {text}
   </a>
