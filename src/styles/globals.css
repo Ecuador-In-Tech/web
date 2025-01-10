@@ -34,7 +34,7 @@
 
   span,
   svg{
-    @apply text-sm
+    @apply text-sm;
   }
   
   /* Avoids undesired offcanvas menu 'blink' when closing */
