@@ -2,10 +2,11 @@
 import closeIcon from "../../../public/icons/closeIcon.svg?raw";
 import Link from "./Link.astro";
 
-interface Link {
+interface LinkBody {
 	text: string;
 	href: string;
 }
+
 const { links } = Astro.props;
 ---
 <!-- 
@@ -18,29 +19,30 @@ OffcanvasMenu component:
 -->
 
 <div
-    x-cloak
-    x-bind:class="{
+  x-cloak
+  x-bind:class="{
       'translate-x-0 ': openMenu,
       '-translate-x-full duration-400': !openMenu
     }"
-    
-    class="fixed top-0 left-0 w-full h-full bg-gray-800 text-white transform transition-transform duration-300"
+  class="fixed top-0 left-0 w-full h-full bg-gray-800 text-white transform transition-transform duration-300"
+>
+  <!-- Close button -->
+  <a
+    @click="toggleMenu()"
+    class="w-full flex flex-row justify-end px-4 py-3 text-white cursor-pointer"
   >
-    <!-- Close button -->
-    <a
-      @click="toggleMenu()"
-      class="w-full flex flex-row justify-end px-4 py-3 text-white cursor-pointer"
-    >
-      <Fragment set:html={closeIcon} />
-    </a>
+    <Fragment set:html={closeIcon} />
+  </a>
 
-    <!-- Links -->
-    <ul class="flex flex-col items-center justify-center h-full p-4">
-      {links.map((link:Link) => (
+  <!-- Links -->
+  <ul class="flex flex-col items-center justify-center h-full p-4">
+    {
+      links.map((link: LinkBody) => (
         <div class="block my-4 px-4 uppercase text-xl hover:font-medium">
           <Link href={link.href} text={link.text} />
         </div>
-      ))}
-      <div class="h-[10%]"></div>
-    </ul>
+      ))
+    }
+    <div class="h-[10%]"></div>
+  </ul>
 </div>
