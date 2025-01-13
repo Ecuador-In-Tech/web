@@ -3,51 +3,51 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "montserrat";
-  src: url("../assets/fonts/Montserrat.ttf") format("truetype");
+	font-family: "montserrat";
+	src: url("../assets/fonts/Montserrat.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: "gabarito";
-  src: url("../assets/fonts/Gabarito.ttf") format("truetype");
+	font-family: "gabarito";
+	src: url("../assets/fonts/Gabarito.ttf") format("truetype");
 }
 
 @layer {
-  /* Global text styles */
-  h1,
-  h2,
-  h3 {
-    @apply font-montserrat;
-  }
+	/* Global text styles */
+	h1,
+	h2,
+	h3 {
+		@apply font-montserrat;
+	}
 
-  h4,
-  h5,
-  a,
-  p,
-  span {
-    @apply font-gabarito;
-  }
+	h4,
+	h5,
+	a,
+	p,
+	span {
+		@apply font-gabarito;
+	}
 
-  p {
-    @apply text-lg;
-  }
+	p {
+		@apply text-lg;
+	}
 
-  span,
-  svg{
-    @apply text-sm;
-  }
-  
-  /* Avoids undesired offcanvas menu 'blink' when closing */
-  [x-cloak] {
-    display: none !important;
-  }
+	span,
+	svg {
+		@apply text-sm;
+	}
 
-  /* Components custom styles */
-  .faqs-container {
-    @apply mx-auto shadow-md p-6 pt-0 rounded-xl;
-  }
+	/* Avoids undesired offcanvas menu 'blink' when closing */
+	[x-cloak] {
+		display: none !important;
+	}
 
-  .accordion-transition {
-    transition: all 400ms ease-in-out;
-  }
+	/* Components custom styles */
+	.faqs-container {
+		@apply mx-auto shadow-md p-6 pt-0 rounded-xl;
+	}
+
+	.accordion-transition {
+		transition: all 400ms ease-in-out;
+	}
 }
