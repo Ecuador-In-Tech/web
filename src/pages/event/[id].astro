@@ -26,7 +26,7 @@ const formattedTime = new Date(event.date).toLocaleTimeString('es-EC', {
 ---
 
 <Layout title={event.title}>
-  <main>
+  <main class="event-main-card">
     <div class="event-hero">
       <img src={banner.src} alt={event.title} class="event-image" />
       <div class="event-overlay"></div>
@@ -41,7 +41,7 @@ const formattedTime = new Date(event.date).toLocaleTimeString('es-EC', {
         </nav>
 
         <div class="event-header">
-          <h1>{event.title}</h1>
+          <h1 class="event-header-title">{event.title}</h1>
           <p class="event-tagline">Organizado por <span class="host-name">{event.hostedBy}</span></p>
         </div>
 
@@ -50,7 +50,7 @@ const formattedTime = new Date(event.date).toLocaleTimeString('es-EC', {
             <img src={event.image} alt={event.title} class="rounded-xl">
           </section>
 
-          <section class="event-meta gap-[1.5rem] lg:gap-[1rem] xl:gap-[1.5rem]">
+          <section class="event-meta ">
             <div class="meta-item">
               <div class="meta-icon">📅</div>
               <div class="meta-content">
@@ -72,30 +72,28 @@ const formattedTime = new Date(event.date).toLocaleTimeString('es-EC', {
               <div class="meta-icon">👥</div>
               <div class="meta-content">
                 <h3>Asistentes</h3>
-                <p><span class="attendee-count">{event.attendees}</span> personas van a asistir</p>
+                <p><span class="attendee-count">{event.attendees}</span> personas </p>
               </div>
             </div>
 
             <aside class="event-sidebar">
-              <div class="registration-card p-[0.5rem] lg:p-0">
-                <div class="card-content p-[1rem] lg:py-[0.5rem] xl:p-[1rem]">
-                  <h3 class="font-semibold text-gray-700">¿Listo para unirte?</h3>
+              <div class="registration-card">
+                <div class="card-content">
+                  <h3>¿Listo para unirte?</h3>
                   
-                  <p class="my-2 text-sm text-gray-500">Asegura tu lugar en este increíble evento</p>
-                  <a href={event.link} class="register-button my-4" target="_blank" rel="noopener noreferrer">
+                  <p>Asegura tu lugar en este increíble evento</p>
+                  <a href={event.link} class="register-button" target="_blank" rel="noopener noreferrer">
                     Inscríbete
                   </a>
-                  <p class="registration-note text-blue-600 opacity-75">* Recibirás el link de acceso al registrarte</p>
+                  <p class="registration-note">* Recibirás el link de acceso al registrarte</p>
                 </div>
               </div>
             </aside>
           </section>
-          <!-- <div class="event-main grid grid-cols-2 ">
 
-          </div> -->
           <section class="event-description">
-            <h2 class="text-2xl font-semibold">Acerca de este evento</h2>
-            <p class="font-normal">{event.description}</p>
+            <h2 class="">Acerca de este evento</h2>
+            <p>{event.description}</p>
           </section>
 
           
@@ -104,248 +102,3 @@ const formattedTime = new Date(event.date).toLocaleTimeString('es-EC', {
     </div>
   </main>
 </Layout>
-
-<style>
-main {
-    background-color: #f8fafc;
-    min-height: 100vh;
-  }
-
-  .event-hero {
-    position: relative;
-    height: 10vh;
-    min-height: 300px;
-    max-height: 300px;
-    width: 100%;
-    overflow: hidden;
-  }
-
-  .event-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .event-ad{
-    grid-area: event-image;
-  }
-  .event-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 30%;
-    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.6));
-  }
-
-  .event-container {
-    max-width: 1200px;
-    margin: -100px auto 0;
-    padding: 0 2rem;
-    position: relative;
-    z-index: 2;
-  }
-
-  .event-content {
-    background: white;
-    border-radius: 16px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    padding: 2rem;
-  }
-
-  .breadcrumb {
-    margin-bottom: 2rem;
-    color: #6b7280;
-    font-size: 0.875rem;
-  }
-
-  .breadcrumb a {
-    color: #2563eb;
-    text-decoration: none;
-    transition: color 0.2s;
-  }
-
-  .breadcrumb a:hover {
-    color: #1d4ed8;
-  }
-
-  .breadcrumb span {
-    margin: 0 0.5rem;
-  }
-
-  .event-header {
-    margin-bottom: 1.5rem;
-  }
-
-  h1 {
-    font-size: 2.5rem;
-    color: #111827;
-    font-weight: 700;
-    margin: 0 0 1rem 0;
-    line-height: 1.2;
-  }
-
-  .event-tagline {
-    font-size: 1.125rem;
-    color: #4b5563;
-  }
-
-  .host-name {
-    color: #2563eb;
-    font-weight: 500;
-  }
-
-  .event-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: 
-      "event-image event-details"
-      "about-event about-event";
-    gap: 3rem;
-  }
-
-  .event-meta {
-    display: grid;
-    /* gap: 1.5rem; */
-    margin-bottom: 3rem;
-    background: #f8fafc;
-    padding-inline: 1.5rem;
-    border-radius: 12px;
-    grid-area: event-details;
-  }
-
-  .meta-item {
-    display: flex;
-    gap: 1rem;
-    align-items: flex-start;
-  }
-
-  .meta-icon {
-    font-size: 1.5rem;
-    background: white;
-    padding: 0.75rem;
-    border-radius: 12px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  }
-
-  .meta-content h3 {
-    font-size: 1rem;
-    font-weight: 600;
-    color: #374151;
-    margin: 0 0 0.25rem 0;
-  }
-
-  .meta-content p {
-    margin: 0;
-    color: #6b7280;
-  }
-
-  .attendee-count {
-    color: #059669;
-    font-weight: 600;
-  }
-
-  .event-description {
-    color: #374151;
-    grid-area: about-event;
-  }
-
-  /* .event-description h2 {
-    font-size: 1.5rem;
-    color: #111827;
-    margin: 0 0 1rem 0;
-  } */
-
-  .event-description p {
-    line-height: 1.7;
-  }
-
-  .registration-card {
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    border: 1px solid #e5e7eb;
-    position: sticky;
-    top: 2rem;
-    /* padding: 1rem; */
-  }
-
-  .card-content {
-    padding: 1rem;
-  }
-
-  /* .card-content h3 {
-    font-size: 1.25rem;
-    color: #111827;
-    margin: 0 0 0.5rem 0;
-  } */
-
- /*  .card-content p {
-    color: #6b7280;
-    margin: 0 0 1.5rem 0;
-  } */
-
-  .register-button {
-    display: block;
-    width: 100%;
-    padding: 1rem;
-    background-color: #2563eb;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: 500;
-    transition: all 0.2s;
-  }
-
-  .register-button:hover {
-    background-color: #1d4ed8;
-    transform: translateY(-1px);
-  }
-
-  .registration-note {
-    font-size: 0.875rem;
-    /* color: #6b7280; */
-    /* margin-top: 1rem !important; */
-    text-align: left;
-  }
-
-  @media (max-width: 1020px) {
-    .event-grid {
-      grid-template-columns: 1fr;
-      grid-template-areas: 
-        "event-image"
-        "event-details"
-        "about-event";
-    }
-  }
-
-  @media (max-width: 768px) {
-/*     .event-grid {
-      grid-template-columns: 1fr;
-      grid-template-areas: 
-        "event-image"
-        "event-details"
-        "about-event";
-    } */
-
-    .event-container {
-      margin-top: -50px;
-      padding: 0 1rem;
-    }
-
-    .event-content {
-      padding: 1.5rem;
-    }
-
-    h1 {
-      font-size: 2rem;
-    }
-
-    .event-hero {
-      height: 10vh;
-      min-height: 200px;
-    }
-  }
-
-</style>

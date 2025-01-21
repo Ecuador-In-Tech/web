@@ -50,4 +50,175 @@
 	.accordion-transition {
 		transition: all 400ms ease-in-out;
 	}
+
+
+	/* Event details page styles */
+	.event-main-card {
+		@apply bg-gray-50 min-h-screen pb-12 !important;
+  	}
+
+	.event-hero {
+		@apply relative h-[10vh] min-h-[300px] max-h-[300px] w-full overflow-hidden !important;
+	}
+
+	.event-image {
+		@apply w-full h-full object-cover !important;
+	}
+	
+	.event-ad{
+		grid-area: event-image;
+	}
+
+	.event-overlay {
+		@apply absolute bottom-0 left-0 right-0 h-[30%] bg-gradient-to-b from-transparent to-black/60 !important;
+	}
+
+	.event-container {
+		@apply max-w-[1200px] mx-auto mt-[-100px] px-8 relative z-[5] !important;
+	}
+
+	.event-content {
+		@apply bg-white rounded-lg shadow-lg p-8 !important;
+	}
+
+	.breadcrumb {
+		@apply mb-8 text-gray-500 text-sm !important;
+	}
+
+	.breadcrumb a {
+		@apply text-blue-600 no-underline transition-colors duration-200 !important;
+	}
+
+	.breadcrumb a:hover {
+		color: #1d4ed8 !important;
+	}
+
+	.breadcrumb span {
+		@apply my-[0.5rem] !important;
+	}
+
+	.event-header {
+		@apply mb-[1.5rem] !important;
+	}
+
+	.event-header h1 {
+		@apply text-[2.5rem] text-[#111827] font-[700] mt-[1rem] !important; 
+	}
+
+	.event-tagline {
+		@apply text-gray-600 text-lg py-2 !important;
+	}
+
+	.host-name {
+		@apply text-blue-600 font-medium text-lg !important;
+	}
+
+	.event-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-areas: 
+		"event-image event-details"
+		"about-event about-event";
+		@apply gap-[1.5rem] lg:gap-[3.5rem] !important;
+	}
+
+	.event-meta {
+		grid-area: event-details;
+
+		@apply grid mb-12 bg-gray-50 px-6 rounded-lg gap-[1.5rem] lg:gap-[1rem] xl:gap-[1.5rem] !important; 
+	}
+
+	.meta-item {
+		@apply flex gap-4 items-start !important;
+	}
+
+	.meta-item h3 {
+		@apply font-semibold !important;
+	}
+
+	.meta-icon {
+		@apply text-xl bg-white p-3 rounded-lg shadow !important;
+	}
+
+	.meta-content h3 {
+		@apply text-base font-semibold text-gray-800 mb-1 !important;
+	}
+
+	.meta-content p {
+		@apply m-0 text-base text-gray-500 !important;
+	}
+
+	.attendee-count {
+		@apply text-teal-600 font-semibold !important;
+	}
+
+	.event-description {
+		grid-area: about-event;
+		@apply text-gray-800 !important;
+	}
+
+	.event-description h2 {
+		@apply text-2xl font-semibold !important;
+	}
+
+	.event-description p {
+		@apply text-gray-500 leading-[1.7]  !important;
+	}
+
+	.registration-card {
+		@apply bg-white rounded-lg shadow-md border border-gray-200 sticky top-8 p-[0.5rem] lg:p-0 !important;
+	}
+
+	.card-content {
+		@apply lg:py-[0.5rem] xl:p-[1rem] p-[1rem] !important;
+	}
+
+	.card-content h3 {
+		@apply font-semibold text-gray-700 !important;
+	}
+
+	 .card-content p {
+		@apply my-2 text-sm text-gray-500 !important;
+	}
+
+	.register-button {
+		@apply block w-full p-3 bg-blue-600 text-white text-center no-underline rounded-md my-4 font-medium transition-all duration-200 !important;
+	}
+
+	.register-button:hover {
+		@apply bg-blue-800 transform -translate-y-[1px] !important;
+	}
+
+	.registration-note {
+		@apply text-sm text-left text-blue-600 opacity-75 !important;
+	}
+
+	@media (max-width: 890px) {
+		.event-grid {
+		grid-template-columns: 1fr;
+		grid-template-areas: 
+			"event-image"
+			"event-details"
+			"about-event";
+		}
+	}
+
+	@media (max-width: 768px) {
+		.event-container {
+			@apply mt-[-50px] px-4 !important;
+		}
+
+		.event-content {
+			@apply p-[1.5rem] !important;
+		}
+
+		.event-header h1 {
+			@apply text-[2rem] !important;
+		}
+
+		.event-hero {
+			@apply h-[10vh] min-h-[200px] !important;
+		}
+	}
+
 }
