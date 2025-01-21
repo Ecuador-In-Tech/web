@@ -1,6 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import events from "../../assets/events.json";
+import banner from '../../../public/banner_events.png'
 
 export function getStaticPaths() {
   return events.map(event => ({
@@ -27,7 +28,7 @@ const formattedTime = new Date(event.date).toLocaleTimeString('es-EC', {
 <Layout title={event.title}>
   <main>
     <div class="event-hero">
-      <img src={event.image} alt={event.title} class="event-image" />
+      <img src={banner.src} alt={event.title} class="event-image" />
       <div class="event-overlay"></div>
     </div>
     
@@ -105,9 +106,9 @@ main {
 
   .event-hero {
     position: relative;
-    height: 50vh;
-    min-height: 400px;
-    max-height: 600px;
+    height: 10vh;
+    min-height: 300px;
+    max-height: 300px;
     width: 100%;
     overflow: hidden;
   }
@@ -312,8 +313,8 @@ main {
     }
 
     .event-hero {
-      height: 40vh;
-      min-height: 300px;
+      height: 10vh;
+      min-height: 200px;
     }
   }
 
