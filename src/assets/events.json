@@ -1,5 +1,17 @@
 [
 	{
+		"id": "path-to-impact-2",
+		"title": "Path to Impact: Brayen Gavilanes",
+		"description": "Automatización de postulaciones a empleo con Selenium",
+		"link": "https://forms.gle/Hgs2cGvcEugzqQCu8",
+		"date": "2025-01-25",
+		"place": "Online",
+		"modality": "Virtual",
+		"hostedBy": "Ecuador In Tech",
+		"image": "/path_to_impact_2.jpg",
+		"attendees": 30
+	},
+	{
 		"id": "path-to-impact-1",
 		"title": "Path to Impact: Agustina Scandogliero",
 		"description": "Estrategias para impulsar tu carrera en IT",
