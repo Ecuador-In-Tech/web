@@ -1,27 +1,27 @@
 ---
-import Layout from "../../layouts/Layout.astro";
+import banner from "../../../public/banner_events.png";
 import events from "../../assets/events.json";
-import banner from '../../../public/banner_events.png'
+import Layout from "../../layouts/Layout.astro";
 
 export function getStaticPaths() {
-  return events.map(event => ({
-    params: { id: event.id },
-    props: { event },
-  }));
+	return events.map((event) => ({
+		params: { id: event.id },
+		props: { event },
+	}));
 }
 
 const { event } = Astro.props;
 
-const formattedDate = new Date(event.date).toLocaleDateString('es-EC', {
-  weekday: 'long',
-  year: 'numeric',
-  month: 'long',
-  day: 'numeric'
+const formattedDate = new Date(event.date).toLocaleDateString("es-EC", {
+	weekday: "long",
+	year: "numeric",
+	month: "long",
+	day: "numeric",
 });
 
-const formattedTime = new Date(event.date).toLocaleTimeString('es-EC', {
-  hour: '2-digit',
-  minute: '2-digit'
+const formattedTime = new Date(event.date).toLocaleTimeString("es-EC", {
+	hour: "2-digit",
+	minute: "2-digit",
 });
 ---
 

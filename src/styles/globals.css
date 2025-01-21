@@ -66,11 +66,10 @@
 		transition: all 400ms ease-in-out;
 	}
 
-
 	/* Event details page styles */
 	.event-main-card {
 		@apply bg-gray-50 min-h-screen pb-12 !important;
-  	}
+	}
 
 	.event-hero {
 		@apply relative h-[10vh] min-h-[300px] max-h-[300px] w-full overflow-hidden !important;
@@ -79,8 +78,8 @@
 	.event-image {
 		@apply w-full h-full object-cover !important;
 	}
-	
-	.event-ad{
+
+	.event-ad {
 		grid-area: event-image;
 	}
 
@@ -117,7 +116,7 @@
 	}
 
 	.event-header h1 {
-		@apply text-[2.5rem] text-[#111827] font-[700] mt-[1rem] !important; 
+		@apply text-[2.5rem] text-[#111827] font-[700] mt-[1rem] !important;
 	}
 
 	.event-tagline {
@@ -131,16 +130,16 @@
 	.event-grid {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		grid-template-areas: 
-		"event-image event-details"
-		"about-event about-event";
+		grid-template-areas:
+			"event-image event-details"
+			"about-event about-event";
 		@apply gap-[1.5rem] lg:gap-[3.5rem] !important;
 	}
 
 	.event-meta {
 		grid-area: event-details;
 
-		@apply grid mb-12 bg-gray-50 px-6 rounded-lg gap-[1.5rem] lg:gap-[1rem] xl:gap-[1.5rem] !important; 
+		@apply grid mb-12 bg-gray-50 px-6 rounded-lg gap-[1.5rem] lg:gap-[1rem] xl:gap-[1.5rem] !important;
 	}
 
 	.meta-item {
@@ -192,7 +191,7 @@
 		@apply font-semibold text-gray-700 !important;
 	}
 
-	 .card-content p {
+	.card-content p {
 		@apply my-2 text-sm text-gray-500 !important;
 	}
 
@@ -210,11 +209,11 @@
 
 	@media (max-width: 890px) {
 		.event-grid {
-		grid-template-columns: 1fr;
-		grid-template-areas: 
-			"event-image"
-			"event-details"
-			"about-event";
+			grid-template-columns: 1fr;
+			grid-template-areas:
+				"event-image"
+				"event-details"
+				"about-event";
 		}
 	}
 
@@ -235,5 +234,4 @@
 			@apply h-[10vh] min-h-[200px] !important;
 		}
 	}
-
 }

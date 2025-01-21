@@ -3,16 +3,16 @@ import type { Event } from "../interfaces/events";
 import CardBase from "./CardBase.astro";
 
 const {
-  id,
-  title,
-  description,
-  link,
-  date,
-  place,
-  modality,
-  hostedBy,
-  image,
-  attendees,
+	id,
+	title,
+	description,
+	link,
+	date,
+	place,
+	modality,
+	hostedBy,
+	image,
+	attendees,
 } = Astro.props as Event;
 
 const eventHeaderProps = { id, title, image, modality, description };
