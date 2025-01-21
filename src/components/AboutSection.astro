@@ -1,0 +1,32 @@
+---
+import { ButtonStyle } from "../enums/button-type.enum";
+//import heroImage from "../assets/hacktoberfest.jpg";
+import Button from "./shared/Button.astro";
+const { Primary } = ButtonStyle;
+const { id, title, description, image, cta } = Astro.props;
+---
+
+<section id={id} class="py-16 bg-gray-50">
+  <div class="container mx-auto px-4">
+    <div
+      class="w-[88%] lg:w-[92%] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-start"
+    >
+      <div class="order-2 lg:order-1">
+        <h2 class="text-3xl font-bold mb-6">
+          {title}
+        </h2>
+        <p class="text-gray-600 mb-6">
+          {description}
+        </p>
+        <Button text={cta.text} link={cta.link} style={Primary} />
+      </div>
+      <div class="bg-gray-200 order-1 lg:order-2 rounded-lg">
+        <img
+          src={image.link}
+          alt={image.alt}
+          class="w-full object-cover h-64 rounded-xl transform hover:scale-105 transition-transform duration-300"
+        />
+      </div>
+    </div>
+  </div>
+</section>

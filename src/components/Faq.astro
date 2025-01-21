@@ -15,7 +15,7 @@ Father component: Alpine.js logic
 This ensures only one accordion is open at a time.
 
 -->
-<section 
+<section
   x-data="{
     activeId: null,
 
@@ -35,13 +35,11 @@ This ensures only one accordion is open at a time.
         };
       }  
     }"
-
-  class="py-16 bg-white">
+  class="py-16 bg-white"
+>
   <div class="container mx-auto px-4">
     <h2 class="text-3xl font-bold text-center mb-12">Preguntas frecuentes</h2>
-    <div
-      class="container faqs-container "
-    >
+    <div class="container faqs-container">
       {
         commonQuestions.map((question, index) => (
           <Accordion

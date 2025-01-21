@@ -43,6 +43,21 @@
 	}
 
 	/* Components custom styles */
+	.base-btn {
+		@apply w-fit border-solid border-2 bg-transparent px-5 py-2 rounded-xl font-medium;
+		border: solid 2px !important;
+	}
+
+	.primary-btn {
+		@apply font-semibold  text-blue-600  hover:bg-blue-600 hover:text-white;
+		/* border: solid 2px !important;
+		border-color: #2563eb; */
+	}
+
+	.outlined-white-btn {
+		@apply border-white font-semibold text-white hover:bg-white hover:text-blue-600;
+	}
+
 	.faqs-container {
 		@apply mx-auto shadow-md p-6 pt-0 rounded-xl;
 	}
