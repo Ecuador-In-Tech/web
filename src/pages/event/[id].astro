@@ -45,53 +45,60 @@ const formattedTime = new Date(event.date).toLocaleTimeString('es-EC', {
           <p class="event-tagline">Organizado por <span class="host-name">{event.hostedBy}</span></p>
         </div>
 
-        <div class="event-grid">
-          <div class="event-main">
-            <section class="event-meta">
-              <div class="meta-item">
-                <div class="meta-icon">📅</div>
-                <div class="meta-content">
-                  <h3>Fecha y Hora</h3>
-                  <p>{formattedDate}</p>
-                  <p>{formattedTime}</p>
-                </div>
-              </div>
+        <div class="event-grid ">
+          <section class="event-ad">
+            <img src={event.image} alt={event.title} class="rounded-xl">
+          </section>
 
-              <div class="meta-item">
-                <div class="meta-icon">📍</div>
-                <div class="meta-content">
-                  <h3>Ubicación</h3>
-                  <p>{event.place}</p>
-                </div>
-              </div>
-
-              <div class="meta-item">
-                <div class="meta-icon">👥</div>
-                <div class="meta-content">
-                  <h3>Asistentes</h3>
-                  <p><span class="attendee-count">{event.attendees}</span> personas van a asistir</p>
-                </div>
-              </div>
-            </section>
-
-            <section class="event-description">
-              <h2>Acerca de este evento</h2>
-              <p>{event.description}</p>
-            </section>
-          </div>
-
-          <aside class="event-sidebar">
-            <div class="registration-card">
-              <div class="card-content">
-                <h3>¿Listo para unirte?</h3>
-                <p>¡Asegura tu lugar en este increíble evento!</p>
-                <a href={event.link} class="register-button" target="_blank" rel="noopener noreferrer">
-                  Regístrate ahora
-                </a>
-                <p class="registration-note">* Se requiere registro para asistir</p>
+          <section class="event-meta gap-[1.5rem] lg:gap-[1rem] xl:gap-[1.5rem]">
+            <div class="meta-item">
+              <div class="meta-icon">📅</div>
+              <div class="meta-content">
+                <h3>Fecha y Hora</h3>
+                <p>{formattedDate}</p>
+                <p>{formattedTime}</p>
               </div>
             </div>
-          </aside>
+
+            <div class="meta-item">
+              <div class="meta-icon">📍</div>
+              <div class="meta-content">
+                <h3>Ubicación</h3>
+                <p>{event.place}</p>
+              </div>
+            </div>
+
+            <div class="meta-item">
+              <div class="meta-icon">👥</div>
+              <div class="meta-content">
+                <h3>Asistentes</h3>
+                <p><span class="attendee-count">{event.attendees}</span> personas van a asistir</p>
+              </div>
+            </div>
+
+            <aside class="event-sidebar">
+              <div class="registration-card p-[0.5rem] lg:p-0">
+                <div class="card-content p-[1rem] lg:py-[0.5rem] xl:p-[1rem]">
+                  <h3 class="font-semibold text-gray-700">¿Listo para unirte?</h3>
+                  
+                  <p class="my-2 text-sm text-gray-500">Asegura tu lugar en este increíble evento</p>
+                  <a href={event.link} class="register-button my-4" target="_blank" rel="noopener noreferrer">
+                    Inscríbete
+                  </a>
+                  <p class="registration-note text-blue-600 opacity-75">* Recibirás el link de acceso al registrarte</p>
+                </div>
+              </div>
+            </aside>
+          </section>
+          <!-- <div class="event-main grid grid-cols-2 ">
+
+          </div> -->
+          <section class="event-description">
+            <h2 class="text-2xl font-semibold">Acerca de este evento</h2>
+            <p class="font-normal">{event.description}</p>
+          </section>
+
+          
         </div>
       </div>
     </div>
@@ -118,7 +125,10 @@ main {
     height: 100%;
     object-fit: cover;
   }
-
+  
+  .event-ad{
+    grid-area: event-image;
+  }
   .event-overlay {
     position: absolute;
     bottom: 0;
@@ -164,7 +174,7 @@ main {
   }
 
   .event-header {
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
   }
 
   h1 {
@@ -187,17 +197,21 @@ main {
 
   .event-grid {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+      "event-image event-details"
+      "about-event about-event";
     gap: 3rem;
   }
 
   .event-meta {
     display: grid;
-    gap: 1.5rem;
+    /* gap: 1.5rem; */
     margin-bottom: 3rem;
     background: #f8fafc;
-    padding: 1.5rem;
+    padding-inline: 1.5rem;
     border-radius: 12px;
+    grid-area: event-details;
   }
 
   .meta-item {
@@ -233,13 +247,14 @@ main {
 
   .event-description {
     color: #374151;
+    grid-area: about-event;
   }
 
-  .event-description h2 {
+  /* .event-description h2 {
     font-size: 1.5rem;
     color: #111827;
     margin: 0 0 1rem 0;
-  }
+  } */
 
   .event-description p {
     line-height: 1.7;
@@ -252,22 +267,23 @@ main {
     border: 1px solid #e5e7eb;
     position: sticky;
     top: 2rem;
+    /* padding: 1rem; */
   }
 
   .card-content {
-    padding: 1.5rem;
+    padding: 1rem;
   }
 
-  .card-content h3 {
+  /* .card-content h3 {
     font-size: 1.25rem;
     color: #111827;
     margin: 0 0 0.5rem 0;
-  }
+  } */
 
-  .card-content p {
+ /*  .card-content p {
     color: #6b7280;
     margin: 0 0 1.5rem 0;
-  }
+  } */
 
   .register-button {
     display: block;
@@ -289,15 +305,29 @@ main {
 
   .registration-note {
     font-size: 0.875rem;
-    color: #6b7280;
-    margin-top: 1rem !important;
-    text-align: center;
+    /* color: #6b7280; */
+    /* margin-top: 1rem !important; */
+    text-align: left;
+  }
+
+  @media (max-width: 1020px) {
+    .event-grid {
+      grid-template-columns: 1fr;
+      grid-template-areas: 
+        "event-image"
+        "event-details"
+        "about-event";
+    }
   }
 
   @media (max-width: 768px) {
-    .event-grid {
+/*     .event-grid {
       grid-template-columns: 1fr;
-    }
+      grid-template-areas: 
+        "event-image"
+        "event-details"
+        "about-event";
+    } */
 
     .event-container {
       margin-top: -50px;
