@@ -1,0 +1,320 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import events from "../../assets/events.json";
+
+export function getStaticPaths() {
+  return events.map(event => ({
+    params: { id: event.id },
+    props: { event },
+  }));
+}
+
+const { event } = Astro.props;
+
+const formattedDate = new Date(event.date).toLocaleDateString('es-EC', {
+  weekday: 'long',
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric'
+});
+
+const formattedTime = new Date(event.date).toLocaleTimeString('es-EC', {
+  hour: '2-digit',
+  minute: '2-digit'
+});
+---
+
+<Layout title={event.title}>
+  <main>
+    <div class="event-hero">
+      <img src={event.image} alt={event.title} class="event-image" />
+      <div class="event-overlay"></div>
+    </div>
+    
+    <div class="event-container">
+      <div class="event-content">
+        <nav class="breadcrumb" aria-label="breadcrumb">
+          <a href="/events">Eventos</a>
+          <span>/</span>
+          <span>{event.title}</span>
+        </nav>
+
+        <div class="event-header">
+          <h1>{event.title}</h1>
+          <p class="event-tagline">Organizado por <span class="host-name">{event.hostedBy}</span></p>
+        </div>
+
+        <div class="event-grid">
+          <div class="event-main">
+            <section class="event-meta">
+              <div class="meta-item">
+                <div class="meta-icon">📅</div>
+                <div class="meta-content">
+                  <h3>Fecha y Hora</h3>
+                  <p>{formattedDate}</p>
+                  <p>{formattedTime}</p>
+                </div>
+              </div>
+
+              <div class="meta-item">
+                <div class="meta-icon">📍</div>
+                <div class="meta-content">
+                  <h3>Ubicación</h3>
+                  <p>{event.place}</p>
+                </div>
+              </div>
+
+              <div class="meta-item">
+                <div class="meta-icon">👥</div>
+                <div class="meta-content">
+                  <h3>Asistentes</h3>
+                  <p><span class="attendee-count">{event.attendees}</span> personas van a asistir</p>
+                </div>
+              </div>
+            </section>
+
+            <section class="event-description">
+              <h2>Acerca de este evento</h2>
+              <p>{event.description}</p>
+            </section>
+          </div>
+
+          <aside class="event-sidebar">
+            <div class="registration-card">
+              <div class="card-content">
+                <h3>¿Listo para unirte?</h3>
+                <p>¡Asegura tu lugar en este increíble evento!</p>
+                <a href={event.link} class="register-button" target="_blank" rel="noopener noreferrer">
+                  Regístrate ahora
+                </a>
+                <p class="registration-note">* Se requiere registro para asistir</p>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<style>
+main {
+    background-color: #f8fafc;
+    min-height: 100vh;
+  }
+
+  .event-hero {
+    position: relative;
+    height: 50vh;
+    min-height: 400px;
+    max-height: 600px;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .event-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .event-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30%;
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.6));
+  }
+
+  .event-container {
+    max-width: 1200px;
+    margin: -100px auto 0;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 2;
+  }
+
+  .event-content {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    padding: 2rem;
+  }
+
+  .breadcrumb {
+    margin-bottom: 2rem;
+    color: #6b7280;
+    font-size: 0.875rem;
+  }
+
+  .breadcrumb a {
+    color: #2563eb;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .breadcrumb a:hover {
+    color: #1d4ed8;
+  }
+
+  .breadcrumb span {
+    margin: 0 0.5rem;
+  }
+
+  .event-header {
+    margin-bottom: 3rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    color: #111827;
+    font-weight: 700;
+    margin: 0 0 1rem 0;
+    line-height: 1.2;
+  }
+
+  .event-tagline {
+    font-size: 1.125rem;
+    color: #4b5563;
+  }
+
+  .host-name {
+    color: #2563eb;
+    font-weight: 500;
+  }
+
+  .event-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+  }
+
+  .event-meta {
+    display: grid;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+    background: #f8fafc;
+    padding: 1.5rem;
+    border-radius: 12px;
+  }
+
+  .meta-item {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .meta-icon {
+    font-size: 1.5rem;
+    background: white;
+    padding: 0.75rem;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+
+  .meta-content h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #374151;
+    margin: 0 0 0.25rem 0;
+  }
+
+  .meta-content p {
+    margin: 0;
+    color: #6b7280;
+  }
+
+  .attendee-count {
+    color: #059669;
+    font-weight: 600;
+  }
+
+  .event-description {
+    color: #374151;
+  }
+
+  .event-description h2 {
+    font-size: 1.5rem;
+    color: #111827;
+    margin: 0 0 1rem 0;
+  }
+
+  .event-description p {
+    line-height: 1.7;
+  }
+
+  .registration-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e5e7eb;
+    position: sticky;
+    top: 2rem;
+  }
+
+  .card-content {
+    padding: 1.5rem;
+  }
+
+  .card-content h3 {
+    font-size: 1.25rem;
+    color: #111827;
+    margin: 0 0 0.5rem 0;
+  }
+
+  .card-content p {
+    color: #6b7280;
+    margin: 0 0 1.5rem 0;
+  }
+
+  .register-button {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    background-color: #2563eb;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.2s;
+  }
+
+  .register-button:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-1px);
+  }
+
+  .registration-note {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin-top: 1rem !important;
+    text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    .event-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .event-container {
+      margin-top: -50px;
+      padding: 0 1rem;
+    }
+
+    .event-content {
+      padding: 1.5rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    .event-hero {
+      height: 40vh;
+      min-height: 300px;
+    }
+  }
+
+</style>
