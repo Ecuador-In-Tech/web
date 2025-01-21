@@ -162,7 +162,7 @@
 	}
 
 	.event-description p {
-		@apply text-gray-500 leading-[1.7]  !important;
+		@apply text-gray-500 leading-[1.7] mt-4 !important;
 	}
 
 	.registration-card {
