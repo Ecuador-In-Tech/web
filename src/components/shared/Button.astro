@@ -1,0 +1,17 @@
+---
+import { ButtonStyle } from "../../enums/button-type.enum";
+import type { ButtonI } from "../../interfaces/button.interface";
+const { text, link, style } = Astro.props as ButtonI;
+const { Outline, Primary } = ButtonStyle;
+---
+<a href={link}>
+  <div
+    class:list={[
+    	"base-btn",
+    	{ "outlined-white-btn": style === Outline },
+    	{ "primary-btn": style === Primary },
+    ]}
+  >
+    <p class="text-base">{text}</p>
+  </div>
+</a>

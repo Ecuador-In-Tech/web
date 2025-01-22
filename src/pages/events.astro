@@ -6,7 +6,7 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Events - Ecuador In Tech">
-  <div class="container mx-auto px-4 py-12" x-data="{ selectedEvent: null }">
+  <div class="container mx-auto px-4 py-20" x-data="{ selectedEvent: null }">
     <h1 class="text-4xl font-bold mb-8">Eventos</h1>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {events.map((event: Event, index) => <CardEvent {...event} />)}

@@ -1,16 +1,18 @@
 ---
-import AboutUs from "../components/AboutUs.astro";
+import AboutSection from "../components/AboutSection.astro";
 import Faq from "../components/Faq.astro";
 import Features from "../components/Features.astro";
 import Hero from "../components/Hero.astro";
 import Layout from "../layouts/Layout.astro";
+
+import { aboutUs } from "../assets/home-sections.json";
 ---
 
 <Layout title="Inicio">
   <!-- Hero Section -->
   <Hero />
   <!-- About Us Section -->
-  <AboutUs />
+  <AboutSection {...aboutUs} />
   <!-- Features Section -->
   <Features />
   <!-- FAQ Section -->

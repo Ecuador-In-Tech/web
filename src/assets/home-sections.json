@@ -1,0 +1,44 @@
+{
+	"aboutUs": {
+		"id": "about-us",
+		"title": "Somos la metacomunidad que conecta y potencia a las comunidades tech",
+		"subtitle": "",
+		"description": "En nuestra metacomunidad, unimos fuerzas, compartimos conocimientos y crecemos juntos. Conectamos comunidades tech para impulsar el futuro de la innovación y la colaboración. Únete a nosotros y sé parte del cambio.",
+		"image": {
+			"link": "/images/hacktoberfest.jpg",
+			"alt": "Grupo de personas"
+		},
+		"cta": {
+			"text": "Sé voluntario",
+			"link": "https://forms.gle/un4KaPsmmqS5Yx7Z9"
+		}
+	},
+	"communityLeaders": {
+		"id": "community-leaders",
+		"title": "Trabajemos juntos para fortalecer el ecosistema tech en Ecuador",
+		"subtitle": "¿Eres líder de una comunidad?",
+		"description": "Si te apasiona la tecnología, y crees en el poder de la colaboración y el trabajo en equipo, nos encantaría contactar y ampliar el impacto de tu comunidad",
+		"image": {
+			"link": "",
+			"alt": "Contorno de Ecuador"
+		},
+		"cta": {
+			"text": "Conectemos",
+			"link": "/"
+		}
+	},
+	"exploreEvents": {
+		"id": "explore-events",
+		"title": "Únete a nuestros próximos eventos y amplía tus horizontes",
+		"subtitle": "",
+		"description": "Nos encanta aprender, compartir y expandir nuestros horizontes constantemente. ¡Anímate a explorar todas las actividades que las comunidades tech tienen para ti!",
+		"image": {
+			"link": "/images/codefest_conference.jpg",
+			"alt": "Conferencia en un auditorio"
+		},
+		"cta": {
+			"text": "Conoce más",
+			"link": "/events"
+		}
+	}
+}

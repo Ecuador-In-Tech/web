@@ -40,5 +40,47 @@
 		},
 		"tags": ["UX", "UI", "Creative"],
 		"image": "/herux.png"
+	},
+	{
+		"name": "FunPython",
+		"description": "FunPython es una comunidad tecnológica y red de innovación social que busca conectar a mentes creativas a través del intercambio de ideas y experiencias.",
+		"links": {
+			"website": "https://funpython.org/",
+			"social": {
+				"instagramUrl": "https://www.instagram.com/funpython",
+				"githubUrl": "",
+				"linkedinUrl": "https://www.linkedin.com/company/funpython"
+			}
+		},
+		"tags": ["MicroPython", "Robotics", "IoT"],
+		"image": "/funpython.jpg"
+	},
+	{
+		"name": "GDG Guayaquil",
+		"description": "El Google Developer Group de Guayaquil, es el grupo de desarrolladores guayaquileños que hacen uso de las tecnologías de @Google.",
+		"links": {
+			"website": "https://gdg.community.dev/gdg-guayaquil/",
+			"social": {
+				"instagramUrl": "https://www.instagram.com/gdgguayaquil",
+				"githubUrl": "",
+				"linkedinUrl": ""
+			}
+		},
+		"tags": ["Community", "Development", "GoogleDevelopers"],
+		"image": "/gdg_gye.png"
+	},
+	{
+		"name": "Dotnet Ecuador",
+		"description": "DotNet Ecuador es una comunidad dedicada a la promoción y el desarrollo de tecnologías basadas en la plataforma .NET de Microsoft.",
+		"links": {
+			"website": "https://github.com/DotNet-Ecuador",
+			"social": {
+				"instagramUrl": "",
+				"githubUrl": "",
+				"linkedinUrl": "https://ec.linkedin.com/company/dotnet-ecuador"
+			}
+		},
+		"tags": ["Programming", "DotNet", "Microsoft"],
+		"image": "/dotnet.png"
 	}
 ]
