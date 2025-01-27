@@ -1,0 +1,64 @@
+---
+import contributors from '../../assets/contributors.json';
+import type { SocialLinks } from '../../interfaces/common';
+import ContributorItem from './ContributorItem.astro';
+
+interface Contributor {
+  name: string;
+  description: string;
+  image: string;
+  links?: SocialLinks;
+}
+
+interface Contributors{
+    coreContributors: Contributor[];
+    activeContributors: Contributor[];
+    valuedContributors: Contributor[];
+}
+
+const { 
+  coreContributors: coreContributorsData, 
+  activeContributors: activeContributorsData, 
+  valuedContributors: valuedContributorsData 
+} 
+  = contributors as Contributors;
+---
+
+<div class="hall-of-fame w-fit mx-auto">
+  <h4 class="mb-8 font-semibold text-[var(--text-secondary)]">
+    Hall of Fame
+  </h4>
+  <h1 class="text-4xl font-bold mb-4 w-full md:w-[65%]">
+    Creemos en el poder de la colaboración y el trabajo en equipo
+  </h1>
+  <h3 class="mb-8 font-semibold text-[var(--text-primary)]">
+    — Y esto es un testamento de ello
+  </h3>
+  
+  <section class="contributor-section">
+    <h2 class="text-2xl font-bold mb-4">Colaboradores principales</h2>
+    <div class="contributor-list">
+      {coreContributorsData.map(contributor => (
+        <ContributorItem {...contributor}/>
+      ))}
+    </div>
+  </section>
+
+  <section class="contributor-section">
+    <h2 class="text-2xl font-bold mb-4">Colaboradores activos</h2>
+    <div class="contributor-list">
+      {activeContributorsData.map(contributor => (
+        <ContributorItem {...contributor}/>
+      ))}
+    </div>
+  </section>
+
+  <section class="contributor-section">
+    <h2 class="text-2xl font-bold mb-4">Colaboradores valiosos</h2>
+    <div class="contributor-list">
+      {valuedContributorsData.map(contributor => (
+        <ContributorItem {...contributor}/>
+      ))}
+    </div>
+  </section>
+</div> 
