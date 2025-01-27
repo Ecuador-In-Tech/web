@@ -18,8 +18,12 @@ const { id, title, description, image, cta } = Astro.props;
         <p class="text-gray-600 mb-6">
           {description}
         </p>
-        <div class="flex">
-          <Button text={cta.text} link={cta.link} style={Primary} />
+        <div class="flex gap-3">
+          {
+            cta.map((item: any) => (
+              <Button text={item.text} link={item.link} style={Primary} />
+            ))
+          }
         </div>
       </div>
       <div class="bg-gray-200 order-1 lg:order-2 rounded-lg">

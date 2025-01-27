@@ -8,10 +8,16 @@
 			"link": "/images/hacktoberfest.jpg",
 			"alt": "Grupo de personas"
 		},
-		"cta": {
-			"text": "Sé voluntario",
-			"link": "https://forms.gle/un4KaPsmmqS5Yx7Z9"
-		}
+		"cta": [
+			{
+				"text": "Sé voluntario",
+				"link": "https://forms.gle/un4KaPsmmqS5Yx7Z9"
+			},
+			{
+				"text": "Salón de la fama",
+				"link": "/thanks"
+			}
+		]
 	},
 	"communityLeaders": {
 		"id": "community-leaders",
