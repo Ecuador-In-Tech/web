@@ -139,7 +139,7 @@
 	.event-meta {
 		grid-area: event-details;
 
-		@apply grid mb-12 bg-gray-50 px-6 rounded-lg gap-[1.5rem] lg:gap-[1rem] xl:gap-[1.5rem] !important;
+		@apply grid mb-8 bg-gray-50 p-8 rounded-lg gap-[1.5rem] lg:gap-[1rem] xl:gap-[1.5rem] !important;
 	}
 
 	.meta-item {
