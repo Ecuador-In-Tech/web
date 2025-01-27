@@ -31,7 +31,7 @@ const formattedTime = new Date(event.date).toLocaleTimeString("es-EC", {
       <img src={banner.src} alt={event.title} class="event-image" />
       <div class="event-overlay"></div>
     </div>
-    
+
     <div class="event-container">
       <div class="event-content">
         <nav class="breadcrumb" aria-label="breadcrumb">
@@ -42,15 +42,17 @@ const formattedTime = new Date(event.date).toLocaleTimeString("es-EC", {
 
         <div class="event-header">
           <h1 class="event-header-title">{event.title}</h1>
-          <p class="event-tagline">Organizado por <span class="host-name">{event.hostedBy}</span></p>
+          <p class="event-tagline">
+            Organizado por <span class="host-name">{event.hostedBy}</span>
+          </p>
         </div>
 
-        <div class="event-grid ">
+        <div class="event-grid">
           <section class="event-ad">
             <img src={event.image} alt={event.title} class="rounded-xl">
           </section>
 
-          <section class="event-meta ">
+          <section class="event-meta">
             <div class="meta-item">
               <div class="meta-icon">📅</div>
               <div class="meta-content">
@@ -72,7 +74,9 @@ const formattedTime = new Date(event.date).toLocaleTimeString("es-EC", {
               <div class="meta-icon">👥</div>
               <div class="meta-content">
                 <h3>Asistentes</h3>
-                <p><span class="attendee-count">{event.attendees}</span> personas </p>
+                <p>
+                  <span class="attendee-count">{event.attendees}</span> personas
+                </p>
               </div>
             </div>
 
@@ -80,12 +84,19 @@ const formattedTime = new Date(event.date).toLocaleTimeString("es-EC", {
               <div class="registration-card">
                 <div class="card-content">
                   <h3>¿Listo para unirte?</h3>
-                  
+
                   <p>Asegura tu lugar en este increíble evento</p>
-                  <a href={event.link} class="register-button" target="_blank" rel="noopener noreferrer">
+                  <a
+                    href={event.link}
+                    class="register-button"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     Inscríbete
                   </a>
-                  <p class="registration-note">* Recibirás el link de acceso al registrarte</p>
+                  <p class="registration-note">
+                    * Recibirás el link de acceso al registrarte
+                  </p>
                 </div>
               </div>
             </aside>
@@ -95,8 +106,6 @@ const formattedTime = new Date(event.date).toLocaleTimeString("es-EC", {
             <h2 class="">Acerca de este evento</h2>
             <p>{event.longDescription}</p>
           </section>
-
-          
         </div>
       </div>
     </div>

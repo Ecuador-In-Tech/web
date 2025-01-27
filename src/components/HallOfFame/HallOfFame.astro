@@ -1,27 +1,26 @@
 ---
-import contributors from '../../assets/contributors.json';
-import type { SocialLinks } from '../../interfaces/common';
-import ContributorItem from './ContributorItem.astro';
+import contributors from "../../assets/contributors.json";
+import type { SocialLinks } from "../../interfaces/common";
+import ContributorItem from "./ContributorItem.astro";
 
 interface Contributor {
-  name: string;
-  description: string;
-  image: string;
-  links?: SocialLinks;
+	name: string;
+	description: string;
+	image: string;
+	links?: SocialLinks;
 }
 
-interface Contributors{
-    coreContributors: Contributor[];
-    activeContributors: Contributor[];
-    valuedContributors: Contributor[];
+interface Contributors {
+	coreContributors: Contributor[];
+	activeContributors: Contributor[];
+	valuedContributors: Contributor[];
 }
 
-const { 
-  coreContributors: coreContributorsData, 
-  activeContributors: activeContributorsData, 
-  valuedContributors: valuedContributorsData 
-} 
-  = contributors as Contributors;
+const {
+	coreContributors: coreContributorsData,
+	activeContributors: activeContributorsData,
+	valuedContributors: valuedContributorsData,
+} = contributors as Contributors;
 ---
 
 <div class="hall-of-fame w-fit mx-auto">
@@ -34,31 +33,37 @@ const {
   <h3 class="mb-8 font-semibold text-[var(--text-primary)]">
     — Y esto es un testamento de ello
   </h3>
-  
+
   <section class="contributor-section">
     <h2 class="text-2xl font-bold mb-4">Colaboradores principales</h2>
     <div class="contributor-list">
-      {coreContributorsData.map(contributor => (
-        <ContributorItem {...contributor}/>
-      ))}
+      {
+        coreContributorsData.map((contributor) => (
+          <ContributorItem {...contributor} />
+        ))
+      }
     </div>
   </section>
 
   <section class="contributor-section">
     <h2 class="text-2xl font-bold mb-4">Colaboradores activos</h2>
     <div class="contributor-list">
-      {activeContributorsData.map(contributor => (
-        <ContributorItem {...contributor}/>
-      ))}
+      {
+        activeContributorsData.map((contributor) => (
+          <ContributorItem {...contributor} />
+        ))
+      }
     </div>
   </section>
 
   <section class="contributor-section">
     <h2 class="text-2xl font-bold mb-4">Colaboradores valiosos</h2>
     <div class="contributor-list">
-      {valuedContributorsData.map(contributor => (
-        <ContributorItem {...contributor}/>
-      ))}
+      {
+        valuedContributorsData.map((contributor) => (
+          <ContributorItem {...contributor} />
+        ))
+      }
     </div>
   </section>
-</div> 
+</div>

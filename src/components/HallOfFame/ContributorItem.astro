@@ -1,19 +1,19 @@
 ---
-import SocialLinks from '../shared/SocialLinks.astro'
-const {name, description, image, social} = Astro.props;
+import SocialLinks from "../shared/SocialLinks.astro";
+const { name, description, image, social } = Astro.props;
 ---
 <div class="contributor-item hover:shadow-sm">
-    <div class="contributor-avatar">
-      <img 
-        src={image || `https://api.dicebear.com/7.x/avataaars/svg?seed=${name}`} 
-        alt={`${name}'s avatar`} 
-      />
-    </div>
-    <div class="contributor-info">
-      <h3>{name}</h3>
-      <p class="text-md ">{description}</p>
-      <div class="social-links">
-          <SocialLinks {...social}/>
-      </div>
+  <div class="contributor-avatar">
+    <img
+      src={image || `https://api.dicebear.com/7.x/avataaars/svg?seed=${name}`}
+      alt={`${name}'s avatar`}
+    />
+  </div>
+  <div class="contributor-info">
+    <h3>{name}</h3>
+    <p class="text-md">{description}</p>
+    <div class="social-links">
+      <SocialLinks {...social} />
     </div>
   </div>
+</div>
