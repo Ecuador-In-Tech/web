@@ -18,7 +18,9 @@ const { id, title, description, image, cta } = Astro.props;
         <p class="text-gray-600 mb-6">
           {description}
         </p>
-        <Button text={cta.text} link={cta.link} style={Primary} />
+        <div class="flex">
+          <Button text={cta.text} link={cta.link} style={Primary} />
+        </div>
       </div>
       <div class="bg-gray-200 order-1 lg:order-2 rounded-lg">
         <img
