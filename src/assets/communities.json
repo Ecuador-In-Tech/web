@@ -11,7 +11,7 @@
 			}
 		},
 		"tags": ["FOSS", "Open Source", "Programming"],
-		"image": "/kernel-chaos.png"
+		"image": "/kernel-chaos.webp"
 	},
 	{
 		"name": "Wordpress Guayaquil",
@@ -25,7 +25,7 @@
 			}
 		},
 		"tags": ["Design", "UI", "UX", "Creative"],
-		"image": "/wordpress.png"
+		"image": "/wordpress.webp"
 	},
 	{
 		"name": "HerUX",
@@ -39,7 +39,7 @@
 			}
 		},
 		"tags": ["UX", "UI", "Creative"],
-		"image": "/herux.png"
+		"image": "/herux.webp"
 	},
 	{
 		"name": "FunPython",
@@ -67,7 +67,7 @@
 			}
 		},
 		"tags": ["Community", "Development", "GoogleDevelopers"],
-		"image": "/gdg_gye.png"
+		"image": "/gdg_gye.webp"
 	},
 	{
 		"name": "Dotnet Ecuador",
@@ -81,6 +81,6 @@
 			}
 		},
 		"tags": ["Programming", "DotNet", "Microsoft"],
-		"image": "/dotnet.png"
+		"image": "/dotnet.webp"
 	}
 ]

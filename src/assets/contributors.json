@@ -3,7 +3,7 @@
 		{
 			"name": "Nataly Sandoya",
 			"description": "Ha desarrollado las interfaces de usuario del sitio web principal de Ecuador In Tech. También ha diseñado el arte para los eventos que se han realizado desde que empezó la comunidad, así como otros materiales de comunicación, dándole una identidad visual.",
-			"image": "/images/people/nataly.png",
+			"image": "/images/people/nataly.webp",
 			"social": {
 				"githubUrl": "https://github.com/nsandoya",
 				"linkedinUrl": "https://www.linkedin.com/in/nataly-sandoya/"
@@ -12,7 +12,7 @@
 		{
 			"name": "Iván Manzaba",
 			"description": "Ha compartido su conocimiento de Git y GitHub como ponente en el primer evento de la comunidad. También ha contribuido activamente en el desarrollo del sitio web actual de Ecuador In Tech, y ayuda activamente con la gestión de la comunidad.",
-			"image": "/images/people/ivan.png",
+			"image": "/images/people/ivan.webp",
 			"social": {
 				"githubUrl": "https://github.com/IvanM9",
 				"linkedinUrl": "https://www.linkedin.com/in/iv%C3%A1n-manzaba"
@@ -21,7 +21,7 @@
 		{
 			"name": "Brayen Gavilanez",
 			"description": "Como cofundador, ha contribuido con proyectos, gestión y liderazgo dentro de la comunidad. Brayen ha logrado también conectar la meta-comunidad con diferentes actores, ampliando su alcance.",
-			"image": "/images/people/brayen.png",
+			"image": "/images/people/brayen.webp",
 			"social": {
 				"githubUrl": "https://github.com/bjgavilanes"
 			}
@@ -29,7 +29,7 @@
 		{
 			"name": "David Cortez",
 			"description": "Como cofundador, ha moldeado la comunidad a través de un liderazgo estratégico, asociaciones colaborativas y contribuciones tanto al desarrollo del sitio web como a iniciativas de impacto.",
-			"image": "/images/people/dav.png",
+			"image": "/images/people/dav.webp",
 			"social": {
 				"githubUrl": "https://github.com/davcortez"
 			}
@@ -39,7 +39,7 @@
 		{
 			"name": "Jhon Merchan",
 			"description": "Ha participado de forma activa, conectando Ecuador In Tech con otros líderes y difundiendo las actividades, ampliando así la red de la meta-comunidad.",
-			"image": "/images/people/jhon.png",
+			"image": "/images/people/jhon.webp",
 			"social": {
 				"githubUrl": "https://github.com/jhon-p16"
 			}
@@ -49,7 +49,7 @@
 		{
 			"name": "Agustina Scandogliero",
 			"description": "Ha aportado su amplio conocimiento como ponente en Path to impact: una serie de charlas diseñadas para apoyar a las personas en su proceso de búsqueda de empleo, ofreciendo estrategias prácticas y consejos para sobresalir y dejar huella en la industria de TI, sin importar su nivel de experiencia o área de especialización.",
-			"image": "/images/people/agustina.png",
+			"image": "/images/people/agustina.webp",
 			"social": {
 				"linkedinUrl": "https://www.linkedin.com/in/agustina-scandogliero/"
 			}
