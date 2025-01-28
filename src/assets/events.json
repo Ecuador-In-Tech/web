@@ -9,7 +9,7 @@
 		"place": "Online",
 		"modality": "Virtual",
 		"hostedBy": "Ecuador In Tech",
-		"image": "/path_to_impact_3.jpg",
+		"image": "/path_to_impact_3.webp",
 		"attendees": 30
 	},
 	{
@@ -22,7 +22,7 @@
 		"place": "Universidad Bolivariana del Ecuador (UBE)",
 		"modality": "Presencial",
 		"hostedBy": "ETH Ecuador",
-		"image": "/devcon_gye_2025.jpg",
+		"image": "/devcon_gye_2025.webp",
 		"attendees": 45
 	},
 	{
@@ -35,7 +35,7 @@
 		"place": "Online",
 		"modality": "Virtual",
 		"hostedBy": "Ecuador In Tech",
-		"image": "/path_to_impact_2.jpg",
+		"image": "/path_to_impact_2.webp",
 		"attendees": 30
 	},
 	{
@@ -61,7 +61,7 @@
 		"place": "Online",
 		"modality": "Virtual",
 		"hostedBy": "Ecuador In Tech",
-		"image": "/github-workshop.jpg",
+		"image": "/github-workshop.webp",
 		"attendees": 31
 	}
 ]
