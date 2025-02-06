@@ -1,5 +1,18 @@
 [
 	{
+		"id": "path-to-impact-4",
+		"title": "Path to Impact: Pablo Cisneros",
+		"description": "Desafía los límites: Cómo trabajar en una de las mejores compañías del mundo",
+		"longDescription":"¿Alguna vez te has preguntado cómo las naves espaciales modernas vencen la gravedad terrestre y se aventuran a proezas cada vez más grandes en el vacío del espacio? Esta y otras hazañas de ingeniería no serían posibles sin el trabajo y el conocimiento de grandes equipos interdisciplinarios —¡y el ámbito IT sin duda tiene en ello su lugar! Te invitamos a descubrir con nosotros el viaje de Pablo Cisneros hacia el Jet Propulsion Lab de la NASA, y cómo sus conocimientos en DevOps y reliability son ahora una pieza importante de proyectos que nos llevarán un poco más lejos en la odisea humana por explorar el espacio.",
+		"link": "https://forms.gle/Hgs2cGvcEugzqQCu8",
+		"date": "2025-02-07T19:00",
+		"place": "Online",
+		"modality": "Virtual",
+		"hostedBy": "Ecuador In Tech",
+		"image": "/path_to_impact_4.webp",
+		"attendees": 30
+	},
+	{
 		"id": "path-to-impact-3",
 		"title": "Path to Impact: Danaé Townsend",
 		"description": "Beyond: Equilibrio entre datos y humanidad",
