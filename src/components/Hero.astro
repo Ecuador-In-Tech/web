@@ -1,25 +1,151 @@
 ---
-
+// Image will be optimized by Astro's built-in image optimization
+const overlayStyle = "linear-gradient(to right, rgba(37, 99, 235, 0.9), rgba(29, 78, 216, 0.85))";
 ---
 
-<section
-  class="flex flex-col items-center justify-center bg-gradient-to-r from-indigo-700 to-blue-500 h-[100vh] text-white py-20"
->
-  <div
-    class="container grid grid-cols-1 gap-8 mx-auto px-4 text-center justify-items-center"
-  >
-    <h3 class="text-2xl font-medium">Bienvenido a</h3>
-    <h1 class="text-6xl lg:text-8xl font-bold">Ecuador In Tech</h1>
-    <p
-      class="text-base mb-8 uppercase font-montserrat font-medium text-slate-300 tracking-wide lg:text-xl"
-    >
-      Conecta, Aprende y Comparte
-    </p>
-    <a
-      href="/communities"
-      class="w-fit bg-transparent border-white border-2 text-white px-5 py-2 rounded-xl font-medium hover:bg-white hover:text-blue-600 hover:font-semibold"
-    >
-      Conoce más
-    </a>
+<section class="hero-section">
+  <div class="hero-background">
+    <img 
+      src="/background-hero.webp"
+      alt="Diverse group of people collaborating"
+      class="background-image"
+      loading="lazy"
+      decoding="async"
+      class="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+      onload="this.style.opacity='1'"
+      style="opacity: 0; transition: opacity 0.3s ease-in-out;"
+    />
+  </div>
+  
+  <div class="content-wrapper">
+    <div class="hero-content">
+      <h3 class="welcome-text">Bienvenido a</h3>
+      <h1 class="main-title">Ecuador In Tech</h1>
+      <p class="tagline">Conecta, Aprende y Comparte</p>
+      
+      <div class="cta-group">
+        <a href="/communities" class="primary-cta">
+          Conoce más
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+          </svg>
+        </a>
+        <a href="/events" class="secondary-cta">
+          Ver Eventos
+        </a>
+      </div>
+    </div>
   </div>
 </section>
+
+<style>
+  .hero-section {
+    @apply relative min-h-screen flex items-center justify-center overflow-hidden;
+  }
+
+  .hero-background {
+    @apply absolute inset-0 z-0;
+  }
+
+  .background-image {
+    @apply w-full h-full object-cover;
+    filter: brightness(0.6);
+  }
+
+  .hero-background::after {
+    content: '';
+    @apply absolute inset-0;
+    background: linear-gradient(
+      135deg,
+      rgba(37, 99, 235, 0.9) 0%,
+      rgba(29, 78, 216, 0.85) 100%
+    );
+  }
+
+  .content-wrapper {
+    @apply relative z-10 container mx-auto px-4 py-20;
+  }
+
+  .hero-content {
+    @apply max-w-4xl mx-auto text-center text-white;
+  }
+
+  .welcome-text {
+    @apply text-2xl md:text-3xl font-medium mb-4 
+           animate-[fadeIn_1s_ease-in] opacity-0;
+    animation: fadeIn 1s ease-in forwards;
+    animation-delay: 0.2s;
+  }
+
+  .main-title {
+    @apply text-5xl md:text-7xl lg:text-8xl font-bold mb-6 
+           animate-[slideUp_1s_ease-out] opacity-0;
+    animation: slideUp 1s ease-out forwards;
+    animation-delay: 0.4s;
+  }
+
+  .tagline {
+    @apply text-lg md:text-xl uppercase font-montserrat font-medium 
+           text-blue-100 tracking-wide mb-12
+           animate-[fadeIn_1s_ease-in] opacity-0;
+    animation: fadeIn 1s ease-in forwards;
+    animation-delay: 0.6s;
+  }
+
+  .cta-group {
+    @apply flex flex-col sm:flex-row gap-4 justify-center items-center
+           animate-[fadeIn_1s_ease-in] opacity-0;
+    animation: fadeIn 1s ease-in forwards;
+    animation-delay: 0.8s;
+  }
+
+  .primary-cta {
+    @apply flex items-center gap-2 px-8 py-3 bg-white text-blue-600 
+           rounded-full font-semibold transition-all duration-300
+           hover:bg-blue-50 hover:transform hover:-translate-y-1 
+           hover:shadow-lg focus:outline-none focus:ring-2 
+           focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-600;
+  }
+
+  .secondary-cta {
+    @apply px-8 py-3 border-2 border-white text-white rounded-full 
+           font-semibold transition-all duration-300
+           hover:bg-white/10 hover:transform hover:-translate-y-1
+           focus:outline-none focus:ring-2 focus:ring-white 
+           focus:ring-offset-2 focus:ring-offset-blue-600;
+  }
+
+  .icon {
+    @apply w-5 h-5;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .cta-group {
+      @apply w-full;
+    }
+    
+    .primary-cta, .secondary-cta {
+      @apply w-full justify-center;
+    }
+  }
+</style>
