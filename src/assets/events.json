@@ -1,5 +1,18 @@
 [
 	{
+		"id": "marca-personal-en-it",
+		"title": "Cómo construí mi marca personal como programadora",
+		"description": "Reflexiones, estrategias y consejos prácticos sobre Marca personal, por Sofía Grijalva (creadora de CondorCoders)",
+		"longDescription":"¡Hola! Si estás dando tu primer paso en el mundo IT o buscando un cambio en tu carrera, te invitamos a nuestra próxima charla sobre Marca personal en IT con Sofía Grijalva (Front-end developer en ABC News y Fundadora de CondorCoders) ✨. En esta edición especial, aprenderás estrategias y consejos valiosos sobre creación de marca personal, basados en el propio proceso de Sofía al crear CondorCoders. Esta charla exploraremos cómo definir una identidad propia, crear contenido y generar oportunidades. Además, cómo elegir un enfoque en tecnología y aprovechar plataformas como GitHub, Instagram y Twitch para construir una comunidad. Por último, abordaremos también la importancia del networking y cómo gestionar críticas y crecimiento.",
+		"link": "https://forms.gle/niE65ZGNEikLBVjw7",
+		"date": "2025-02-22T19:00",
+		"place": "Online",
+		"modality": "Virtual",
+		"hostedBy": "CondorCoders, Ecuador In Tech",
+		"image": "/marca_personal_condorcoders_ecintech.webp",
+		"attendees": 30
+	},
+	{
 		"id": "path-to-impact-4",
 		"title": "Path to Impact: Pablo Cisneros",
 		"description": "Desafía los límites: Cómo trabajar en una de las mejores compañías del mundo",
