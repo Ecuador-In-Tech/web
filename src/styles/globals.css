@@ -237,7 +237,7 @@
 
 	/* Hall of Fame styles */
 	.hall-of-fame {
-		@/* max-w-[1200px]  */ /* px-4 */ apply mx-auto py-4;
+		@apply mx-auto py-4;
 	}
 
 	.contributor-section {
@@ -290,7 +290,7 @@
 	}
 
 	.contributor-info p {
-		@/* line-clamp-3  */ apply text-[var(--text-secondary)] mb-4 leading-relaxed text-base;
+		@apply text-[var(--text-secondary)] mb-4 leading-relaxed text-base;
 	}
 
 	.social-links {
