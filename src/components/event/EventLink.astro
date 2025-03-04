@@ -1,0 +1,24 @@
+---
+const { link, title, description, footer, buttonText } = Astro.props;
+---
+
+<aside class="event-sidebar">
+    <div class="registration-card">
+        <div class="card-content">
+            <h3>{title}</h3>
+
+            <p>{description}</p>
+            <a
+                href={link}
+                class="register-button"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                {buttonText}
+            </a>
+            <p class="registration-note">
+                {footer}
+            </p>
+        </div>
+    </div>
+</aside>
