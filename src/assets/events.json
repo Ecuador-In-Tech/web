@@ -4,7 +4,13 @@
 		"title": "Cómo construí mi marca personal como programadora",
 		"description": "Reflexiones, estrategias y consejos prácticos sobre Marca personal, por Sofía Grijalva (creadora de CondorCoders)",
 		"longDescription": "¡Hola! Si estás dando tu primer paso en el mundo IT o buscando un cambio en tu carrera, te invitamos a nuestra próxima charla sobre Marca personal en IT con Sofía Grijalva (Front-end developer en ABC News y Fundadora de CondorCoders) ✨. En esta edición especial, aprenderás estrategias y consejos valiosos sobre creación de marca personal, basados en el propio proceso de Sofía al crear CondorCoders. Esta charla exploraremos cómo definir una identidad propia, crear contenido y generar oportunidades. Además, cómo elegir un enfoque en tecnología y aprovechar plataformas como GitHub, Instagram y Twitch para construir una comunidad. Por último, abordaremos también la importancia del networking y cómo gestionar críticas y crecimiento.",
-		"link": "https://forms.gle/niE65ZGNEikLBVjw7",
+		"link": {
+			"url": "https://youtu.be/cs2ax_WvXM4?si=hG7KMz4FL_YJajyQ",
+			"title": "Mira la charla aquí",
+			"description": "No te pierdas la charla, ya está disponible en YouTube",
+			"footer": "",
+			"buttonText": "Ver charla"
+		},
 		"date": "2025-02-22T19:00",
 		"place": "Online",
 		"modality": "Virtual",
@@ -17,7 +23,13 @@
 		"title": "Path to Impact: Pablo Cisneros",
 		"description": "Desafía los límites: Cómo trabajar en una de las mejores compañías del mundo",
 		"longDescription": "¿Alguna vez te has preguntado cómo las naves espaciales modernas vencen la gravedad terrestre y se aventuran a proezas cada vez más grandes en el vacío del espacio? Esta y otras hazañas de ingeniería no serían posibles sin el trabajo y el conocimiento de grandes equipos interdisciplinarios —¡y el ámbito IT sin duda tiene en ello su lugar! Te invitamos a descubrir con nosotros el viaje de Pablo Cisneros hacia el Jet Propulsion Lab de la NASA, y cómo sus conocimientos en DevOps y reliability son ahora una pieza importante de proyectos que nos llevarán un poco más lejos en la odisea humana por explorar el espacio.",
-		"link": "https://forms.gle/Hgs2cGvcEugzqQCu8",
+		"link": {
+			"url": "https://youtu.be/vPDC9rvRtaw?si=eEWsiu23d0rL1Qqe",
+			"title": "Mira la charla aquí",
+			"description": "No te pierdas la charla, ya está disponible en YouTube",
+			"footer": "",
+			"buttonText": "Ver charla"
+		},
 		"date": "2025-02-07T19:00",
 		"place": "Online",
 		"modality": "Virtual",
@@ -30,7 +42,13 @@
 		"title": "Path to Impact: Danaé Townsend",
 		"description": "Beyond: Equilibrio entre datos y humanidad",
 		"longDescription": "¿Cómo automatizar el proceso de selección de candidatos sin perder su valor humano? Ante un panorama cada vez más desafiante —y a su vez lleno de oportunidades— te invitamos a ser parte de Beyond:  Equilibrio entre datos y humanidad. Conocerás los hallazgos, retos y progresos de Danaé y su equipo durante su trabajo en Beyond para combinar clasificación y análisis de datos con IA, fuentes cualitativas de información y juicio humano. Además, podrás informarte sobre las tendencias actuales en procesos de contratación, y cómo puedes usar estos aprendizajes a tu favor. ¡Anímate a descubrir cómo una visión más amplia del mundo IT puede ayudarte a destacar tus habilidades y experiencias de forma única!",
-		"link": "https://forms.gle/Hgs2cGvcEugzqQCu8",
+		"link": {
+			"url": "https://youtu.be/6KF05V6JJOA?si=cDRfx5YLrVphIYyY",
+			"title": "Mira la charla aquí",
+			"description": "No te pierdas la charla, ya está disponible en YouTube",
+			"footer": "",
+			"buttonText": "Ver charla"
+		},
 		"date": "2025-01-28T19:00",
 		"place": "Online",
 		"modality": "Virtual",
@@ -43,7 +61,13 @@
 		"title": "DEVCON VII Watch Party - Guayaquil",
 		"description": "Conecta con la tecnología del futuro y sé parte de la transformación digital en ECU",
 		"longDescription": "DEVCON, la conferencia global más influyente de Ethereum, es un crisol de desarrolladores, innovadores y visionarios. Celebrado en Bangkok, DEVCON SEA fue un punto de encuentro clave para la comunidad global, donde una delegación de ocho representantes de Ecuador se sumergió en las últimas innovaciones y principios de Ethereum. DEVCON VII Watch Party es una iniciativa multi-ciudad para compartir los aprendizajes de DEVCON SEA con la comunidad local. Este evento de visionado presentará grabaciones de charlas principales, paneles y sesiones técnicas de DEVCON VII, diseñadas para educar y fomentar el debate y la creación de redes entre los asistentes en Quito, Guayaquil y Cuenca.",
-		"link": "https://lu.ma/ik89v6yr",
+		"link": {
+			"url": "https://lu.ma/ik89v6yr",
+			"title": "Más información del evento",
+			"description": "Este evento es gratuito y abierto a la comunidad. ¡Te esperamos!",
+			"footer": "",
+			"buttonText": "Ir a la web de registro"
+		},
 		"date": "2025-01-30T10:00",
 		"place": "Universidad Bolivariana del Ecuador (UBE)",
 		"modality": "Presencial",
@@ -56,7 +80,13 @@
 		"title": "Path to Impact: Brayen Gavilanes",
 		"description": "Automatización web para postulaciones a empleo con Selenium",
 		"longDescription": "La búsqueda de empleo es un paso natural en el camino de cualquier profesional —y también una oportunidad para innovar. En la próxima charla de nuestra serie Path to impact, Brayen Gavilanes (DevOps Engineer y Project Manager con amplia experiencia en UNIX, Cloud y automatización), compartirá una herramienta única que desarrolló durante su propia búsqueda de empleo. Inspirado por los retos de este proceso, Brayen explorará cómo convertir desafíos comunes en catalizadores para soluciones innovadoras",
-		"link": "https://forms.gle/Hgs2cGvcEugzqQCu8",
+		"link": {
+			"url": "https://www.youtube.com/live/55ZlgHZ8tME?si=tbgmwAmK6B9-K9QX",
+			"title": "Mira la charla aquí",
+			"description": "No te pierdas la charla, ya está disponible en YouTube",
+			"footer": "",
+			"buttonText": "Ver charla"
+		},
 		"date": "2025-01-25T19:00",
 		"place": "Online",
 		"modality": "Virtual",
@@ -69,7 +99,13 @@
 		"title": "Path to Impact: Agustina Scandogliero",
 		"description": "Estrategias para impulsar tu carrera en IT",
 		"longDescription": "Construir una carrera en el mundo tech es un camino tan desafiante como lleno de oportunidades. Path to impact es una serie de charlas pensadas para acompañarte en el proceso, ofreciendo estrategias y consejos prácticos para que puedas sobresalir y dejar tu marca en un sector competitivo, sin importar tu nivel de experiencia o área de especialización. Descubrirás las habilidades y perfiles en demanda en empresas tech, y aprenderás métodos y consejos prácticos para comunicar tu experiencia de forma auténtica y proactiva. Si estás dando tu primer paso en el mundo IT o buscando un cambio en tu carrera, esta serie es para ti. ¡Únete y transforma tu camino profesional!",
-		"link": "https://forms.gle/BHCDTkGfGBH8Rio49",
+		"link": {
+			"url": "https://youtu.be/tJWORsfX2oE?si=rwkw4YL7cRjK8GKM",
+			"title": "Mira la charla aquí",
+			"description": "No te pierdas la charla, ya está disponible en YouTube",
+			"footer": "",
+			"buttonText": "Ver charla"
+		},
 		"date": "2025-01-17T18:00",
 		"place": "Online",
 		"modality": "Virtual",
@@ -82,7 +118,13 @@
 		"title": "Git & GitHub",
 		"description": "Hands-on Workshop para iniciantes.",
 		"longDescription": "¿Interesado en el mundo tech pero no sabes por dónde empezar? ¡Este taller es para ti! Únete a nosotros para aprender los fundamentos de Git y GitHub, las herramientas esenciales para la colaboración en cualquier proyecto digital.",
-		"link": "https://forms.gle/BHCDTkGfGBH8Rio49",
+		"link": {
+			"url": "https://youtu.be/V5g-CxWVEJE?si=n1WbcIYWkdPPmUlX",
+			"title": "Mira la charla aquí",
+			"description": "No te pierdas la charla, ya está disponible en YouTube",
+			"footer": "",
+			"buttonText": "Ver charla"
+		},
 		"date": "2024-12-04T19:00",
 		"place": "Online",
 		"modality": "Virtual",
