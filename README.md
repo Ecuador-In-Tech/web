@@ -40,7 +40,7 @@ Es recomendable hacer una revisión más exhaustiva, por favor, procura ejecutar
 pnpm check && pnpm build && pnpm preview
 ```
 
-Antes de enviar tus commits hacia el repositorio principal. Ejectura `pnpm check` es suficiente; pero recomendados realizar el proceso entero: ¡tu sabes cómo son estas máquinas!
+Antes de enviar tus commits hacia el repositorio principal. Ejecutar `pnpm check` es suficiente; pero recomendados realizar el proceso entero: ¡tu sabes cómo son estas máquinas!
 
 >Se está ponderando qué task runner se implementará para mejorar la experiencia de desarrollo
 
