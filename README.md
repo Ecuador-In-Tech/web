@@ -19,17 +19,12 @@ Ser la referencia en Ecuador para conectar, fortalecer y ampliar el impacto de l
 Este repositorio tiene instalado:
 
 - Un linter, `biome`
-- Un formatter, `dprint`
 
 Además de usar `pnpm` cómo administrador de paquetes para JS y amigos.
 
 ### Biome
 
 `biome` es una alternativa a ESLint + Prettier, que está escrita en Rust. Es una excelente herramienta, que acorta considerablemente el tiempo de desarrollo. Aunque esta herramienta tiene un [paquete distribuído a través de `npm`](https://www.npmjs.com/package/@biomejs/biome), la invocación a través de `npm` / `pnpm` es un cuello de botella para su rendimiento.
-
-### Dprint
-
-Al igual que `biome`, esta es una herramienta intencionada en reemplazar, en este caso, a Prettier. La razón por la cuál usamos `dprint` es porque [`biome` tiene soporte parcial para HTML y sus supersets](https://biomejs.dev/internals/language-support/#html-super-languages-support). Es decir: usamos `dprint` para suplementar biome.
 
 ### Instalación
 
