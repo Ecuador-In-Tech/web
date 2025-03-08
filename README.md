@@ -16,42 +16,31 @@ Ser la referencia en Ecuador para conectar, fortalecer y ampliar el impacto de l
 
 ## ¿Cómo contribuir en este repositorio?
 
-Este repositorio tiene instalado:
+### Guía de Inicio Rápido
 
-- Un linter, `biome`
-- Un formatter, `dprint`
+En el directorio raíz de este repositorio, ejecuta:
 
-Además de usar `pnpm` cómo administrador de paquetes para JS y amigos.
-
-### Biome
-
-`biome` es una alternativa a ESLint + Prettier, que está escrita en Rust. Es una excelente herramienta, que acorta considerablemente el tiempo de desarrollo. Aunque esta herramienta tiene un [paquete distribuído a través de `npm`](https://www.npmjs.com/package/@biomejs/biome), la invocación a través de `npm` / `pnpm` es un cuello de botella para su rendimiento.
-
-### Dprint
-
-Al igual que `biome`, esta es una herramienta intencionada en reemplazar, en este caso, a Prettier. La razón por la cuál usamos `dprint` es porque [`biome` tiene soporte parcial para HTML y sus supersets](https://biomejs.dev/internals/language-support/#html-super-languages-support). Es decir: usamos `dprint` para suplementar biome.
-
-### Instalación
-
-#### pnpm
-
-Preferimos una instalación global usando `pnpm`
-
-```sh
-pnpm install --global @biomejs/biome dprint
+```
+pnpm install
 ```
 
-Sin embargo, tanto `biome` como `dprint` están declarados cómo dependencias de desarrollo dentro del `package.json`.
+Para descargar las depedencias.
 
->[Estamos a la mitad de una implementación de Nix, como administrador de paquete.](https://github.com/Ecuador-In-Tech/web/pull/20)
+Cuando quieras revisar tus cambios, ejecuta:
 
-### Desarrollo
-
-La tubería UNIX intencionada para el desarrollo de este proyecto es:
-
-```sh
-pnpm check && pnpm dev
 ```
+pnpm dev
+```
+
+Y abre, en tu navegador, `localhost:4321`. ¡Podrás observar nuestra página web!
+
+Es recomendable hacer una revisión más exhaustiva, por favor, procura ejecutar:
+
+```
+pnpm check && pnpm build && pnpm preview
+```
+
+Antes de enviar tus commits hacia el repositorio principal. Ejecutar `pnpm check` es suficiente; pero recomendados realizar el proceso entero: ¡tu sabes cómo son estas máquinas!
 
 >Se está ponderando qué task runner se implementará para mejorar la experiencia de desarrollo
 
@@ -86,37 +75,3 @@ Creemos en un entorno seguro y respetuoso para todos. Adherimos a los siguientes
 * **GitHub:** [\[Ecuador In Tech\]](https://github.com/Ecuador-In-Tech)
 
 **¡Juntos construiremos un futuro tecnológico más próspero para Ecuador!*
-
-## How to run the project
-
-### 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
-
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
-
-### 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-

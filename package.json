@@ -16,13 +16,12 @@
 		"@astrojs/tailwind": "^5.1.5",
 		"@types/alpinejs": "^3.13.11",
 		"alpinejs": "^3.14.8",
-		"astro": "^5.3.0",
+		"astro": "^5.4.2",
 		"astro-compressor": "^1.0.0",
 		"tailwindcss": "^3.4.17"
 	},
 	"packageManager": "pnpm@10.0.0-beta.1+sha512.629de0531b9ae9a3f8e372d014ef8f5a57906d9a48095ced54bbfbd246b4136381478032c8d13819fd1eedde8330517a799ea6756eedd9a136e36524fa3083cf",
 	"devDependencies": {
-		"@biomejs/biome": "^1.9.4",
-		"dprint": "^0.48.0"
+		"@biomejs/biome": "^1.9.4"
 	}
 }
