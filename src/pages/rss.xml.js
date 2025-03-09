@@ -15,7 +15,7 @@ export async function GET(context) {
 		items: events.map((event) => ({
 			title: event.title,
 			description: event.description,
-			link: event.link,
+			link: event.link.url,
 			date: event.date,
 			place: event.place,
 			modality: event.modality,
