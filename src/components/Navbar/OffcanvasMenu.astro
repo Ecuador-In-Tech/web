@@ -9,40 +9,34 @@ interface LinkBody {
 
 const { links } = Astro.props;
 ---
-<!-- 
-OffcanvasMenu component:
-- Interactivity relies on Alpine.js:
-  1. Visibility: Managed by `x-bind:class`, implements Tailwind classes relying on the `openMenu` state from `Navbar`.
-  2. Transitions: Implemented using `x-transition.origin.top.left` for smooth animations.
-  3. Blinking prevention: Uses `x-cloak` to hide elements until Alpine.js initializes.
-- User actions (clicking the burger menu or links) trigger `toggleMenu()` to open/close the menu.
--->
 
 <div
+  id="mobile-menu"
   x-cloak
   x-bind:class="{
       'translate-x-0 ': openMenu,
       '-translate-x-full duration-400': !openMenu
     }"
   class="fixed top-0 left-0 w-full h-full bg-gray-800 text-white transform transition-transform duration-300"
+  role="dialog"
+  aria-modal="true"
+  aria-label="Menú de navegación móvil"
 >
   <!-- Close button -->
-  <a
+  <button
     @click="toggleMenu()"
-    class="w-full flex flex-row justify-end px-4 py-3 text-white cursor-pointer"
+    class="absolute top-4 right-4 p-2 text-white"
+    aria-label="Cerrar menú"
   >
     <Fragment set:html={closeIcon} />
-  </a>
+  </button>
 
-  <!-- Links -->
-  <ul class="flex flex-col items-center justify-center h-full p-4">
+  <!-- Navigation Links -->
+  <nav class="flex flex-col items-center justify-center h-full space-y-8" aria-label="Menú móvil">
     {
       links.map((link: LinkBody) => (
-        <div class="block my-4 px-4 uppercase text-xl hover:font-medium">
-          <Link href={link.href} text={link.text} />
-        </div>
+        <Link {...link} size="text-xl" />
       ))
     }
-    <div class="h-[10%]"></div>
-  </ul>
+  </nav>
 </div>

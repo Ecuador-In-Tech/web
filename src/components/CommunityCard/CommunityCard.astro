@@ -13,15 +13,41 @@ const {
 } = Astro.props as Community;
 ---
 
-<div class="bg-white rounded-2xl p-6 max-w-lg drop-shadow-md">
+<div 
+  class="bg-white rounded-2xl p-6 max-w-lg drop-shadow-md"
+  itemscope 
+  itemtype="http://schema.org/Organization"
+>
+  <meta itemprop="name" content={name} />
+  <meta itemprop="description" content={description} />
+  <meta itemprop="image" content={image} />
+  {links?.website && <meta itemprop="url" content={links.website} />}
+
   <div class="flex items-start gap-8">
-    <Avatar logoUrl={image} title={name} />
+    <Avatar logoUrl={image} title={`Logo de ${name}`} />
     <div class="flex-1 space-y-3">
       <div>
         <h3 class="text-xl font-semibold text-gray-900 mb-1">
-          <a href={links?.website}>{name}</a>
+          {links?.website ? (
+            <a 
+              href={links.website} 
+              itemprop="url"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Visitar sitio web de ${name}`}
+            >
+              {name}
+            </a>
+          ) : (
+            <span>{name}</span>
+          )}
         </h3>
-        <p class="text-gray-600 text-sm leading-relaxed">{description}</p>
+        <p 
+          class="text-gray-600 text-sm leading-relaxed"
+          itemprop="description"
+        >
+          {description}
+        </p>
       </div>
 
       <Tags tags={tags} />

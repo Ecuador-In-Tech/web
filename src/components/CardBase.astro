@@ -10,24 +10,29 @@ const { title, image, modality, description } = Astro.props;
 ---
 <div
   class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+  aria-labelledby={`card-title-${title.toLowerCase().replace(/\s+/g, '-')}`}
 >
   <div class="h-48 overflow-hidden relative">
     <img
       src={image}
-      alt={title}
+      alt={`Imagen representativa de ${title}`}
       class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-300"
+      loading="lazy"
+      decoding="async"
     />
     {
       modality && (
         <div class="absolute top-4 right-4">
           <span
             class={`px-3 py-1 rounded-full text-sm font-semibold ${
-            	modality === "Hybrid"
-            		? "bg-purple-100 text-purple-800"
-            		: modality === "Virtual"
-            			? "bg-green-100 text-green-800"
-            			: "bg-blue-100 text-blue-800"
+              modality === "Hybrid"
+                ? "bg-purple-100 text-purple-800"
+                : modality === "Virtual"
+                  ? "bg-green-100 text-green-800"
+                  : "bg-blue-100 text-blue-800"
             }`}
+            role="status"
+            aria-label={`Modalidad: ${modality}`}
           >
             {modality}
           </span>
@@ -39,9 +44,13 @@ const { title, image, modality, description } = Astro.props;
     <!-- Title and description -->
     <div class="flex flex-col">
       <div class="flex justify-between items-start mb-3">
-        <h2 class="text-xl font-bold text-gray-800">{title}</h2>
+        <h2 id={`card-title-${title.toLowerCase().replace(/\s+/g, '-')}`} class="text-xl font-bold text-gray-800">
+          {title}
+        </h2>
       </div>
-      <p class="text-gray-600 mb-4 line-clamp-2">{description}</p>
+      <p class="text-gray-600 mb-4 line-clamp-2">
+        {description}
+      </p>
     </div>
     <!-- Custom info -->
     <slot />

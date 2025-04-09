@@ -3,11 +3,19 @@ import events from "../assets/events.json";
 import CardEvent from "../components/CardEvent.astro";
 import type { Event } from "../interfaces/events";
 import Layout from "../layouts/Layout.astro";
+
+const pageDescription =
+	"Explora los próximos eventos tecnológicos en Ecuador. Conferencias, talleres, meetups y más organizados por las comunidades tech más activas del país.";
 ---
 
-<Layout title="Events - Ecuador In Tech">
+<Layout 
+  title="Eventos Tecnológicos" 
+  description={pageDescription}
+  type="website"
+  image="/banner_events.webp"
+>
   <div class="container mx-auto px-4 py-20" x-data="{ selectedEvent: null }">
-    <h1 class="text-4xl font-bold mb-8">Eventos</h1>
+    <h1 class="text-4xl font-bold mb-8">Eventos Tecnológicos en Ecuador</h1>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {events.map((event: Event, index) => <CardEvent {...event} />)}
     </div>

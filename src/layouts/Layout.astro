@@ -1,38 +1,93 @@
 ---
 import Footer from "../components/Footer.astro";
 import Navbar from "../components/Navbar/Navbar.astro";
-
-// Incorporate global styles file to whole website
 import "../styles/globals.css";
 
 interface Props {
 	title: string;
+	description?: string;
+	image?: string;
+	type?: string;
 }
 
-const { title } = Astro.props;
+const { title, description, image, type = "website" } = Astro.props;
+const defaultTitle = "Ecuador In Tech | Comunidad Tecnológica del Ecuador";
+const defaultDescription =
+	"La metacomunidad que conecta y potencia a las comunidades tech en Ecuador. Unimos fuerzas, compartimos conocimientos y crecemos juntos para impulsar el futuro de la innovación y la colaboración tecnológica ecuatoriana.";
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const socialImage = new URL(image || "/background-hero.webp", Astro.site);
 ---
 
 <!DOCTYPE html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Ecuador In Tech" />
     <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description || defaultDescription} />
+    <meta name="keywords" content="Ecuador In Tech, comunidades tech Ecuador, eventos tech Ecuador, tecnología Ecuador, innovación Ecuador, colaboración tecnológica, comunidad tecnológica, voluntariado tecnológico, desarrollo software Ecuador, programación Ecuador, meetups tecnológicos, conferencias tech" />
+    <meta name="author" content="Ecuador In Tech" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="theme-color" content="#2563eb" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content={type} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title || defaultTitle} />
+    <meta property="og:description" content={description || defaultDescription} />
+    <meta property="og:image" content={socialImage} />
+    <meta property="og:site_name" content="Ecuador In Tech" />
+    <meta property="og:locale" content="es_EC" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title || defaultTitle} />
+    <meta name="twitter:description" content={description || defaultDescription} />
+    <meta name="twitter:image" content={socialImage} />
+
+    <!-- Enlaces -->
+    <link rel="canonical" href={canonicalURL} />
+    <link rel="icon" type="image/webp" href="/favicon.webp" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="RSS Feed para Ecuador In Tech"
+      href={new URL("rss.xml", Astro.site)}
+    />
+
+    <!-- Analytics -->
     <script
       defer
       src="https://cloud.umami.is/script.js"
       data-website-id="cb063bf5-5bb2-443b-ba30-e0447966a426"
     ></script>
-    <link rel="icon" type="image/svg+xml" href="/favicon.webp" />
-    <link rel="sitemap" href="/sitemap-index.xml" />
-    <link
-      rel="alternate"
-      type="application/rss+xml"
-      title="RSS Feed for Ecuador In Tech"
-      href={new URL("rss.xml", Astro.site)}
-    />
-    <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Ecuador In Tech",
+        "url": "${Astro.site}",
+        "logo": "${new URL("/favicon.webp", Astro.site)}",
+        "description": "${defaultDescription}",
+        "sameAs": [
+          "https://github.com/Ecuador-In-Tech"
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "EC",
+          "addressRegion": "Ecuador"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "customer support",
+          "url": "${new URL("/#about-us", Astro.site)}"
+        }
+      }
+    </script>
+
+    <title>{title ? `${title} | Ecuador In Tech` : defaultTitle}</title>
   </head>
   <body class="min-h-screen flex flex-col">
     <Navbar />

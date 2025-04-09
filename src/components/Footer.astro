@@ -1,49 +1,94 @@
 ---
-
+const currentYear = new Date().getFullYear();
 ---
-<footer class="bg-gray-800 text-white py-8">
+
+<footer class="bg-gray-800 text-white py-8" role="contentinfo">
   <div class="container mx-auto px-4">
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div>
-        <h3 class="text-xl font-bold mb-4">Ecuador In Tech</h3>
-        <p class="text-gray-300">
+      <!-- Información de la organización -->
+      <div itemscope itemtype="http://schema.org/Organization">
+        <h2 class="text-xl font-bold mb-4" itemprop="name">Ecuador In Tech</h2>
+        <p class="text-gray-300" itemprop="description">
           Conectando comunidades, empoderando personas.
         </p>
+        <link itemprop="url" href="https://ecuadorintech.org" />
       </div>
-      <div>
-        <h3 class="text-xl font-bold mb-4">Enlaces rápidos</h3>
+
+      <!-- Enlaces rápidos -->
+      <nav aria-label="Enlaces del pie de página">
+        <h2 class="text-xl font-bold mb-4">Enlaces rápidos</h2>
         <ul class="space-y-2">
-          <li><a href="/" class="text-gray-300 hover:text-white">Inicio</a></li>
           <li>
-            <a href="/communities" class="text-gray-300 hover:text-white"
-            >Comunidades</a>
+            <a 
+              href="/" 
+              class="text-gray-300 hover:text-white transition-colors"
+              aria-label="Ir a la página principal"
+            >
+              Inicio
+            </a>
           </li>
           <li>
-            <a href="/events" class="text-gray-300 hover:text-white">Eventos</a>
+            <a 
+              href="/communities" 
+              class="text-gray-300 hover:text-white transition-colors"
+              aria-label="Ver las comunidades tecnológicas"
+            >
+              Comunidades
+            </a>
           </li>
           <li>
-            <a href="/#about-us" class="text-gray-300 hover:text-white"
-            >Voluntariado</a>
+            <a 
+              href="/events" 
+              class="text-gray-300 hover:text-white transition-colors"
+              aria-label="Ver próximos eventos"
+            >
+              Eventos
+            </a>
           </li>
           <li>
-            <a href="/rss.xml" class="text-gray-300 hover:text-white">
-              Suscríbete a nuestro canal RSS</a>
+            <a 
+              href="/#about-us" 
+              class="text-gray-300 hover:text-white transition-colors"
+              aria-label="Información sobre voluntariado"
+            >
+              Voluntariado
+            </a>
+          </li>
+          <li>
+            <a 
+              href="/rss.xml" 
+              class="text-gray-300 hover:text-white transition-colors"
+              type="application/rss+xml"
+              rel="alternate"
+              aria-label="Suscribirse al canal RSS"
+            >
+              Suscríbete a nuestro canal RSS
+            </a>
           </li>
         </ul>
-      </div>
+      </nav>
+
+      <!-- Redes sociales -->
       <div>
-        <h3 class="text-xl font-bold mb-4">Conecta con nosotros</h3>
+        <h2 class="text-xl font-bold mb-4">Conecta con nosotros</h2>
         <div class="flex space-x-4">
           <a
             href="https://github.com/Ecuador-In-Tech"
-            class="text-gray-300 hover:text-white"
-          >GitHub</a>
+            class="text-gray-300 hover:text-white transition-colors"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visitar nuestro GitHub"
+          >
+            GitHub
+          </a>
         </div>
       </div>
     </div>
+
+    <!-- Copyright -->
     <div class="mt-8 pt-8 border-t border-gray-700 text-center">
       <p class="text-gray-300">
-        &copy; 2024 Ecuador In Tech. Todos los derechos reservados.
+        &copy; {currentYear} Ecuador In Tech. Todos los derechos reservados.
       </p>
     </div>
   </div>

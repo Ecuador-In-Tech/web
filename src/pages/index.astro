@@ -6,9 +6,16 @@ import Hero from "../components/Hero.astro";
 import Layout from "../layouts/Layout.astro";
 
 import { aboutUs } from "../assets/home-sections.json";
+
+const pageDescription =
+	"Ecuador In Tech: Uniendo y potenciando comunidades tecnológicas en Ecuador. Descubre eventos, comunidades y recursos para desarrolladores ecuatorianos. ¡Únete y crece con nosotros!";
 ---
 
-<Layout title="Inicio">
+<Layout 
+  title="Inicio" 
+  description={pageDescription}
+  type="website"
+>
   <!-- Hero Section -->
   <Hero />
   <!-- About Us Section -->
