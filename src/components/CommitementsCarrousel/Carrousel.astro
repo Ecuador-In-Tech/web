@@ -15,53 +15,53 @@ const { commitements } = Astro.props;
 
 const commitementsLength = commitements.length;
 ---
+
 <div class="flex justify-start overflow-hidden">
-  <div
-    x-data="{ 
+    <div
+        x-data="{
     currentIndex: 0,
     getTranslatePercentage() {
         if (window.innerWidth < 640) { // (sm)
-          return 32; 
+          return 32;
         } else if (window.innerWidth < 1024) { // (md)
-          return 30; 
+          return 30;
         } else { // (lg and xl)
           return 30;
         }
       }
     }"
-    ;
-    class="relative w-full px-3 md:px-0"
-  >
-    <div class="">
-      <div
-        class="flex w-fit xl:w-full transition-transform duration-300 ease-in-out"
-        :style="`transform: translateX(-${currentIndex * getTranslatePercentage()}%)`"
-      >
-        {
-          commitements.map((item: Commitement) => (
-            <CarrouselItem {...item}/>
-          ))
-        }
-      </div>
+        ;
+        class="relative w-full px-3 md:px-0"
+    >
+        <div class="">
+            <div
+                class="flex w-fit xl:w-full transition-transform duration-300 ease-in-out"
+                :style="`transform: translateX(-${currentIndex * getTranslatePercentage()}%)`"
+            >
+                {
+                    commitements.map((item: Commitement) => (
+                        <CarrouselItem {...item} />
+                    ))
+                }
+            </div>
+        </div>
+
+        <!-- Slider buttons -->
+        <button
+            @click={`currentIndex = currentIndex - 1 >= 0 ? currentIndex - 1 : ${commitementsLength} - 1`}
+            class="absolute -left-1 md:left-2 top-1/2 transform -translate-y-1/2 bg-white opacity-70 text-blue-600 px-2 rounded-xl"
+        >
+            <div class="py-5">
+                <Fragment set:html={leftIcon} />
+            </div>
+        </button>
+        <button
+            @click={`currentIndex = currentIndex + 1 < ${commitementsLength} ? currentIndex + 1 : 0`}
+            class="absolute right-1 md:right-2 top-1/2 rotate-180 transform -translate-y-1/2 bg-white opacity-70 text-blue-600 px-2 rounded-xl"
+        >
+            <div class="py-5">
+                <Fragment set:html={leftIcon} />
+            </div>
+        </button>
     </div>
-    
-    <!-- Slider buttons -->
-    <button
-      @click={`currentIndex = currentIndex - 1 >= 0 ? currentIndex - 1 : ${commitementsLength} - 1`}
-      class="absolute -left-1 md:left-2 top-1/2 transform -translate-y-1/2 bg-white opacity-70 text-blue-600 px-2 rounded-xl"
-    >
-      <a class="p-1">
-        <Fragment set:html={leftIcon} />
-      </a>
-      
-    </button>
-    <button
-      @click={`currentIndex = currentIndex + 1 < ${commitementsLength} ? currentIndex + 1 : 0`}
-      class="absolute right-1 md:right-2 top-1/2 rotate-180 transform -translate-y-1/2 bg-white opacity-70 text-blue-600 px-2 rounded-xl"
-    >
-      <a class="p-1">
-        <Fragment set:html={leftIcon} />
-      </a>
-    </button>
-  </div>
 </div>

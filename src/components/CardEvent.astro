@@ -7,17 +7,34 @@ const { id, title, description, date, place, modality, image, attendees } =
 
 const eventHeaderProps = { id, title, image, modality, description };
 const justDate = date.split("T");
+const formattedDate = new Date(date).toLocaleDateString("es-EC", {
+	weekday: "long",
+	year: "numeric",
+	month: "long",
+	day: "numeric",
+});
 ---
 
 <CardBase {...eventHeaderProps}>
-    <!-- Event Date, Location and Atendees -->
-    <div class="space-y-2 text-sm text-gray-500">
-        <div class="flex items-center gap-2">
+    <div 
+        class="space-y-2 text-sm text-gray-500"
+        itemscope 
+        itemtype="http://schema.org/Event"
+    >
+        <meta itemprop="name" content={title} />
+        <meta itemprop="description" content={description} />
+        <meta itemprop="image" content={image} />
+        <meta itemprop="startDate" content={date} />
+        <meta itemprop="location" content={place} />
+        <meta itemprop="eventAttendanceMode" content={modality === "Virtual" ? "OnlineEventAttendanceMode" : "OfflineEventAttendanceMode"} />
+
+        <div class="flex items-center gap-2" aria-label="Fecha del evento">
             <svg
                 class="w-4 h-4"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
+                aria-hidden="true"
             >
                 <path
                     stroke-linecap="round"
@@ -27,24 +44,18 @@ const justDate = date.split("T");
                 >
                 </path>
             </svg>
-            <span>
-                {
-                    new Date(justDate[0]).toLocaleDateString("es-EC", {
-                        weekday: "long",
-                        year: "numeric",
-                        month: "long",
-                        day: "numeric",
-                        timeZone: "ECT",
-                    })
-                }
-            </span>
+            <time datetime={date} itemprop="startDate">
+                {formattedDate}
+            </time>
         </div>
-        <div class="flex items-center gap-2">
+
+        <div class="flex items-center gap-2" aria-label="Ubicación del evento">
             <svg
                 class="w-4 h-4"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
+                aria-hidden="true"
             >
                 <path
                     stroke-linecap="round"
@@ -61,14 +72,16 @@ const justDate = date.split("T");
                 >
                 </path>
             </svg>
-            <span>{place}</span>
+            <span itemprop="location">{place}</span>
         </div>
-        <div class="flex items-center gap-2">
+
+        <div class="flex items-center gap-2" aria-label="Número de asistentes">
             <svg
                 class="w-4 h-4"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
+                aria-hidden="true"
             >
                 <path
                     stroke-linecap="round"
@@ -80,7 +93,14 @@ const justDate = date.split("T");
             </svg>
             <span>{attendees} asistentes</span>
         </div>
-        <a href={`/event/${id}`} class="details-button">Ver detalles</a>
+
+        <a 
+            href={`/event/${id}`} 
+            class="details-button"
+            aria-label={`Ver más detalles sobre ${title}`}
+        >
+            Ver detalles
+        </a>
     </div>
 </CardBase>
 

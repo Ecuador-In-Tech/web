@@ -1,17 +1,18 @@
 ---
-// Image will be optimized by Astro's built-in image optimization
 const overlayStyle =
 	"linear-gradient(to right, rgba(37, 99, 235, 0.9), rgba(29, 78, 216, 0.85))";
 ---
 
-<section class="hero-section">
-  <div class="hero-background">
+<section class="hero-section" aria-label="Introducción">
+  <div class="hero-background" role="presentation">
     <img 
       src="/background-hero.webp"
-      alt="Diverse group of people collaborating"
+      alt="Grupo diverso de desarrolladores colaborando en un espacio tecnológico en Ecuador"
       class="background-image"
       loading="lazy"
       decoding="async"
+      width="1920"
+      height="1080"
       class="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
       onload="this.style.opacity='1'"
       style="opacity: 0; transition: opacity 0.3s ease-in-out;"
@@ -24,14 +25,14 @@ const overlayStyle =
       <h1 class="main-title">Ecuador In Tech</h1>
       <p class="tagline">Conecta, Aprende y Comparte</p>
       
-      <div class="cta-group">
-        <a href="/communities" class="primary-cta">
+      <div class="cta-group" role="group" aria-label="Enlaces principales">
+        <a href="/communities" class="primary-cta" aria-label="Conoce más sobre nuestras comunidades">
           Conoce más
-          <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
             <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
           </svg>
         </a>
-        <a href="/events" class="secondary-cta">
+        <a href="/events" class="secondary-cta" aria-label="Ver lista de eventos">
           Ver Eventos
         </a>
       </div>

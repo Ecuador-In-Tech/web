@@ -9,6 +9,7 @@ const { image, title, description, cta, link, icon } = Astro.props;
       <img
         src={image}
         class="object-cover rounded-xl w-[300px] h-[400px] mr-4 md:mr-0"
+        alt={ `Imagen representativa sobre: ${title}` }
       />
       <div
         class="bg-white w-[600px] h-[400px] p-6 rounded-xl border-2 mx-0 mr-4 md:mx-4 flex flex-col align-top justify-between"

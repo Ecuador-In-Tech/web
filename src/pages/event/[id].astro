@@ -25,12 +25,23 @@ const formattedTime = new Date(event.date).toLocaleTimeString("es-EC", {
 	hour: "2-digit",
 	minute: "2-digit",
 });
+
+const pageDescription = `${event.title} - ${formattedDate} en ${event.place}. ${event.description}. Organizado por ${event.hostedBy}. ¡Únete a nosotros!`;
 ---
 
-<Layout title={event.title}>
+<Layout
+    title={event.title}
+    description={pageDescription}
+    type="event"
+    image={event.image}
+>
     <main class="event-main-card">
         <div class="event-hero">
-            <img src={banner.src} alt={event.title} class="event-image" />
+            <img 
+                src={banner.src} 
+                alt={`Banner del evento: ${event.title}`} 
+                class="event-image" 
+            />
             <div class="event-overlay"></div>
         </div>
 
@@ -51,12 +62,19 @@ const formattedTime = new Date(event.date).toLocaleTimeString("es-EC", {
                     </p>
                 </div>
 
-                <div class="event-grid">
+                <div class="event-grid" itemscope itemtype="http://schema.org/Event">
+                    <meta itemprop="name" content={event.title} />
+                    <meta itemprop="startDate" content={event.date} />
+                    <meta itemprop="location" content={event.place} />
+                    <meta itemprop="description" content={event.longDescription} />
+                    <meta itemprop="organizer" content={event.hostedBy} />
+
                     <section class="event-ad">
                         <img
                             src={event.image}
-                            alt={event.title}
+                            alt={`Imagen del evento: ${event.title}`}
                             class="rounded-xl"
+                            itemprop="image"
                         />
                     </section>
 
@@ -100,7 +118,7 @@ const formattedTime = new Date(event.date).toLocaleTimeString("es-EC", {
                     </section>
 
                     <section class="event-description">
-                        <h2 class="">Acerca de este evento</h2>
+                        <h2>Acerca de este evento</h2>
                         <p>{event.longDescription}</p>
                     </section>
                 </div>
