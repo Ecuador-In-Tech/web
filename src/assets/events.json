@@ -8,14 +8,14 @@
 			"url": "https://flisolguayaquil.org/",
 			"title": "Más información del evento",
 			"description": "Visita la web oficial del evento para más detalles",
-			"footer": "",
+			"footer": "No te pierdas las charlas, talleres y actividades programadas.",
 			"buttonText": "Ir a la web de FLISOL GYE"
 		},
 		"date": "2025-05-31T09:00",
 		"place": "Universidad Católica de Santiago de Guayaquil, Guayaquil",
 		"modality": "Presencial",
 		"hostedBy": "Ecuador In Tech, CondorCoders, ETH Ecuador, Fun Python, Her UX, Kokoa, WordPress Guayaquil, Phycom, AWS Ecuador, Pyladies",
-		"image": "/fg_logo_isologo_blue.png",
+		"image": "/flisol_gye_2025_afiches.jpg",
 		"attendees": 500
 	},
 	{
