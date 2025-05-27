@@ -1,4 +1,23 @@
 [
+  {
+		"id": "flisol-gye-2025",
+		"title": "FLISOL Guayaquil 2025",
+		"description": "Festival Latinoamericano de Instalación de Software Libre",
+		"longDescription": "El Festival Latinoamericano de Instalación de Software Libre (FLISOL) es un evento anual que celebra el software libre y la cultura abierta en toda América Latina. En Guayaquil, este evento reúne a entusiastas, desarrolladores y usuarios para compartir conocimientos, experiencias y promover el uso del software libre.",
+		"link": {
+			"url": "https://flisolguayaquil.org/",
+			"title": "Más información del evento",
+			"description": "Visita la web oficial del evento para más detalles",
+			"footer": "",
+			"buttonText": "Ir a la web de FLISOL GYE"
+		},
+		"date": "2025-05-31T09:00",
+		"place": "Universidad Católica de Santiago de Guayaquil, Guayaquil",
+		"modality": "Presencial",
+		"hostedBy": "Ecuador In Tech, CondorCoders, ETH Ecuador, Fun Python, Her UX, Kokoa, WordPress Guayaquil, Phycom, AWS Ecuador, Pyladies",
+		"image": "/fg_logo_isologo_blue.png",
+		"attendees": 500
+	},
 	{
 		"id": "marca-personal-en-it",
 		"title": "Cómo construí mi marca personal como programadora",
