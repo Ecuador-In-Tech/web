@@ -10,18 +10,18 @@
 		"check": "biome check --fix"
 	},
 	"dependencies": {
-		"@astrojs/alpinejs": "^0.4.3",
+		"@astrojs/alpinejs": "^0.4.8",
 		"@astrojs/rss": "^4.0.11",
-		"@astrojs/sitemap": "^3.2.1",
-		"@astrojs/tailwind": "^5.1.5",
+		"@astrojs/sitemap": "^3.4.0",
+		"@astrojs/tailwind": "^6.0.2",
 		"@types/alpinejs": "^3.13.11",
-		"alpinejs": "^3.14.8",
-		"astro": "^5.4.2",
+		"alpinejs": "^3.14.9",
+		"astro": "^5.8.0",
 		"astro-compressor": "^1.0.0",
 		"tailwindcss": "^3.4.17"
 	},
-	"packageManager": "pnpm@10.0.0-beta.1+sha512.629de0531b9ae9a3f8e372d014ef8f5a57906d9a48095ced54bbfbd246b4136381478032c8d13819fd1eedde8330517a799ea6756eedd9a136e36524fa3083cf",
 	"devDependencies": {
 		"@biomejs/biome": "^1.9.4"
-	}
+	},
+	"packageManager": "pnpm@9.15.3+sha512.1f79bc245a66eb0b07c5d4d83131240774642caaa86ef7d0434ab47c0d16f66b04e21e0c086eb61e62c77efc4d7f7ec071afad3796af64892fae66509173893a"
 }
